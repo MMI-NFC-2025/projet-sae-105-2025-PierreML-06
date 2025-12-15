@@ -42,26 +42,6 @@
     line-height: var(--lh-body-2);
 }
 
-/* Responsive */
-@media (max-width: 48rem) {
-    .article-meta {
-        padding: 1.25rem;
-    }
-
-    .article-meta__text {
-        font-size: var(--fs-body-3);
-        /* 0.875rem */
-    }
-
-    /* On ne passe plus en colonne, on réduit juste l’écart */
-    .article-meta__row {
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        /* au cas où ça squeeze un peu */
-        align-items: center;
-    }
-}
-
 /* ===============================================
    CITATION D'ARTICLE (orange)
    =============================================== */
@@ -80,13 +60,6 @@
     line-height: var(--line-height-2);
 }
 
-@media (max-width: 48rem) {
-    .article-quote {
-        padding: 1.25rem 1.5rem;
-        font-size: 1rem;
-    }
-}
-
 .article-quote-violet {
     background-color: var(--card-fond2);
     border-left: 0.25rem solid var(--color-violet-1);
@@ -99,13 +72,6 @@
     font-size: var(--fs-body-2);
     font-weight: var(--weight-regular);
     line-height: var(--line-height-2);
-}
-
-@media (max-width: 48rem) {
-    .article-quote-violet {
-        padding: 1.25rem 1.5rem;
-        font-size: 1rem;
-    }
 }
 
 /* ================================
@@ -158,17 +124,4 @@
     line-height: var(--line-height-2);
     color: var(--texte-violet);
     margin: 0;
-}
-
-@media (max-width: 48rem) {
-
-    /* 768px */
-    .card-extrait {
-        padding: 1.5rem;
-        margin: 1.5rem 1rem;
-    }
-
-    .card-extrait__title {
-        font-size: 1.5rem;
-    }
 }

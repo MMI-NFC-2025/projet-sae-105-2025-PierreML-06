@@ -48,22 +48,6 @@
     margin: 0;
 }
 
-@media (max-width: 48rem) {
-
-    /* 768px */
-    .about-page {
-        padding: 2rem 1rem;
-    }
-
-    .texte-titre {
-        font-size: 1.5rem;
-    }
-
-    .texte-contenu {
-        font-size: 1rem;
-    }
-}
-
 /*================================About Card================================*/
 .about-card {
     max-width: 40rem;
@@ -118,23 +102,6 @@
     color: var(--texte-black);
     /* même bleu nuit que le titre */
 }
-
-/* Mobile encore plus compact si besoin */
-@media (max-width: 48rem) {
-
-    /* 768px */
-    .about-card {
-        padding: 1.5rem;
-        border-radius: 1.25rem;
-        /* 20px */
-    }
-
-    .about-card__title {
-        font-size: 1.5rem;
-    }
-}
-
-
 
 /* ===== GLOSSARY PAGE ===== */
 .glossary {
@@ -196,28 +163,4 @@
     font-family: var(--font-body);
     color: var(--texte-black);
     margin: 0;
-}
-
-@media (max-width: 48rem) {
-
-    /* 768px */
-    .glossary {
-        padding: 2rem 1rem;
-    }
-
-    .glossary__title {
-        font-size: 1.75rem;
-    }
-
-    .glossary__subtitle {
-        font-size: 1rem;
-    }
-
-    .glossary__letter {
-        font-size: 1.25rem;
-    }
-
-    .glossary__term {
-        font-size: 1.125rem;
-    }
 }

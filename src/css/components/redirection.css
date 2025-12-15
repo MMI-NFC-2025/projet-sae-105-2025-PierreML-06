@@ -83,12 +83,6 @@ body {
     margin: 0 auto;
 }
 
-@media (min-width: 30rem) {
-    .redirect-langs {
-        flex-direction: row;
-        justify-content: center;
-    }
-}
 
 /* Boutons style Matilda */
 .boutton {
@@ -116,11 +110,6 @@ body {
     background: var(--color-coral);
     color: var(--color-white);
     box-shadow: 0 0.5rem 1.25rem rgba(232, 137, 107, 0.35);
-}
-
-.boutton--primary:hover {
-    transform: translateY(-0.125rem);
-    box-shadow: 0 0.75rem 1.5rem rgba(232, 137, 107, 0.45);
 }
 
 .boutton--secondary {

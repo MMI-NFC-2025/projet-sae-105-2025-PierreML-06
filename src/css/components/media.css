@@ -25,14 +25,3 @@
     font-weight: var(--weight-regular);
     padding: 0 1rem;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-    .article-media {
-        margin: 1.5rem 0;
-    }
-
-    .article-media__caption {
-        font-size: 0.9rem;
-    }
-}

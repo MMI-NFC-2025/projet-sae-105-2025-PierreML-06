@@ -93,36 +93,3 @@
     min-width: 17.5rem;
     /* 280px */
 }
-
-/* Responsive */
-@media (max-width: 40rem) {
-
-    /* 640px */
-    .project-cards-container {
-        padding: 0 1rem;
-        margin: 2rem auto;
-    }
-
-    .card-projet {
-        padding: 1.5rem;
-    }
-
-    .card-projet__title {
-        font-size: 1.5rem;
-    }
-
-    .card-projet__author {
-        font-size: 1rem;
-    }
-
-    .card-projet__icon {
-        width: 3.75rem;
-        /* 60px */
-        height: 3.75rem;
-        /* 60px */
-    }
-
-    .card-projet__button {
-        min-width: 100%;
-    }
-}

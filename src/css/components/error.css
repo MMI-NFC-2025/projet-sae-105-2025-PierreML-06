@@ -122,31 +122,3 @@
     width: 100%;
     justify-content: center;
 }
-
-/* ===== Tablet / Desktop ===== */
-@media (min-width: 48rem) {
-
-    /* 768px */
-    .error-page {
-        padding: 7.5rem 2rem 5rem;
-        /* 120px 32px 80px */
-    }
-
-    .error-page__icon svg {
-        width: 5rem;
-        /* 80px */
-        height: 5rem;
-    }
-
-    .error-page__code {
-        font-size: 5rem;
-    }
-
-    .error-page__title {
-        font-size: 1.75rem;
-    }
-
-    .error-page__description {
-        font-size: 1.05rem;
-    }
-}

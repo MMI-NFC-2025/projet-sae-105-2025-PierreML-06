@@ -46,15 +46,3 @@
     margin: 1rem 0 0 0;
     font-style: normal;
 }
-
-/* Responsive */
-/* Mobile */
-@media (max-width: 48rem) {
-
-    .card-citation,
-    .card-citation-violet {
-        padding: 1.5rem;
-        /* on garde les mêmes coins pour rester cohérent maquette */
-        border-radius: 0 1.25rem 1.25rem 0;
-    }
-}

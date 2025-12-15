@@ -160,13 +160,6 @@
     /* 0 4px 12px */
 }
 
-.btn--primary:hover {
-    box-shadow: 0 0.375rem 1rem rgba(232, 137, 107, 0.4);
-    /* 0 6px 16px */
-    transform: translateY(-0.125rem);
-    /* -2px */
-}
-
 .btn--secondary {
     background: transparent;
     color: var(--color-white);
@@ -174,11 +167,6 @@
     /* 2px */
 }
 
-.btn--secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-0.125rem);
-    /* -2px */
-}
 
 /* ===== TIMELINE SECTION (séparée du hero) ===== */
 
