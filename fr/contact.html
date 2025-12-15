@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Contactez-nous pour en savoir plus sur l'Effet Matilda" />
+  <title>Contact — L'Effet Matilda — Devlace</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../src/css/style.css">
+
+  <!--Fonts-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+  </style>
+
+  <script type="module" src="../src/js/script.js"></script>
+
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Devlace" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="header__bar">
+      <!-- Brand (gauche) -->
+      <a class="header__brand" href="./" aria-label="Retour à l'accueil Devlace">
+        <!-- Logo avec fond violet foncé arrondi -->
+        <img class="header__brand-icon" src="../assets/icons/logo_couleur.svg" alt="Logo Devlace">
+        <span class="header__brand-text">Devlace</span>
+      </a>
+
+      <!-- Actions (droite) : lune → FR → burger -->
+      <div class="header__actions">
+        <!-- Lune - soleil -->
+        <button class="header__theme-toggle" data-btn="theme" type="button" aria-label="Basculer le thème"
+          aria-pressed="false">
+          <span class="header__theme-icon-wrapper" aria-hidden="true">
+            <!-- Lune -->
+            <svg class="header__theme-icon header__theme-icon--moon" viewBox="0 0 32 32">
+              <path
+                d="M12 8c0 6.627 5.373 12 12 12 1.212 0 2.383-.18 3.486-.514C25.992 24.414 21.416 28 16 28 9.373 28 4 22.628 4 16c0-5.415 3.587-9.992 8.514-11.486A12 12 0 0 0 12 8Z"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <!-- Soleil -->
+            <svg class="header__theme-icon header__theme-icon--sun" viewBox="0 0 32 32">
+              <path
+                d="M16 5.333V2.667m0 24v2.666M8.552 8.553 6.667 6.666m16.97 16.97 1.886 1.886M5.333 16H2.666m24 0h2.667m-5.695-7.448 1.885-1.885m-16.97 16.97-1.886 1.886M16 22.667a6.667 6.667 0 1 1 0-13.334 6.667 6.667 0 0 1 0 13.334Z"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </button>
+        <!-- FR remplacé par l'image SVG boutton_fr.svg -->
+        <a class="header__lang" href="/en/contact.html" aria-label="Aller vers la version anglaise du site">
+          <img src="../assets/icons/boutton_fr.svg" alt="FR">
+        </a>
+        <!-- Burger -->
+        <button class="header__burger" data-btn="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+          aria-controls="menu">
+          <span class="header__burger-line" aria-hidden="true"></span>
+          <span class="header__burger-line" aria-hidden="true"></span>
+          <span class="header__burger-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= OVERLAY MENU ================= -->
+  <div class="menu" id="menu" hidden aria-hidden="true">
+    <div class="menu__panel" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+      <div class="menu__head">
+        <div class="menu__brand">
+          <a href="/fr/" class="menu__brand" aria-label="Retour à l’accueil Devlace">
+            <img src="../assets/icons/logo_blanc.svg" alt="logo blanc devlance" class="menu__logo" aria-hidden="true">
+          </a>
+          <h2 id="menuTitle" class="menu__title">Menu</h2>
+        </div>
+        <button class="menu__close" data-btn="menu-close" type="button" aria-label="Fermer le menu">
+          <span class="menu__close-x" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <nav class="menu__nav" aria-label="Navigation principale">
+        <ul class="menu__list">
+          <li><a href="./article_ada.html" class="menu__item">Ada Lovelace</a></li>
+          <li><a href="./article_note_g.html" class="menu__item">le premier programme<br>informatique publié</a></li>
+          <li><a href="./article_film.html" class="menu__item">Radioactif le film</a></li>
+          <li><a href="./article_livre.html" class="menu__item">Le livre : les oubliées de l'histoire</a></li>
+          <li><a href="./article_litterature.html" class="menu__item">les femmes de science dans la littérature</a></li>
+          <li><a href="./frise.html" class="menu__item">Frise</a></li>
+          <li><a href="./autre_projet.html" class="menu__item">Autre projet</a></li>
+          <li><a href="./galerie.html" class="menu__item">Galerie</a></li>
+          <li><a href="./glossaire.html" class="menu__item">Glossaire</a></li>
+          <li><a href="./contact.html" class="menu__item">Contact</a></li>
+          <li><a href="./a_propos.html" class="menu__item">À propos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ================= BREADCRUMB ================= -->
+  <nav class="breadcrumb" aria-label="Fil d'ariane">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item">
+        <a href="./index.html" class="breadcrumb__link">
+          <img src="../assets/icons/home.svg" alt="" class="breadcrumb__icon" aria-hidden="true">
+          Accueil
+        </a>
+      </li>
+      <li class="breadcrumb__item">
+        <span class="breadcrumb__separator" aria-hidden="true">›</span>
+      </li>
+      <li class="breadcrumb__item">
+        <span class="breadcrumb__current" aria-current="page">Contact</span>
+      </li>
+    </ol>
+  </nav>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main">
+    <!-- Ajout de la section d'introduction de contact -->
+    <div class="about-page">
+      <section class="about-section">
+        <h1 class="texte-titre">Contacter-nous</h1>
+        <p class="about-section__textV" ">Une question, une suggestion ou un commentaire ?
+          N'hésitez pas à nous écrire.</p>
+      </section>
+
+      <!-- Ajout du formulaire de contact -->
+      <form class=" contact-form" aria-label="Formulaire de contact">
+          <!-- Champ Nom -->
+        <div class="contact-form__group">
+          <label class="contact-form__label" for="contact-name">
+            <svg class="contact-form__label-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 21a7 7 0 1 0-14 0m7-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" />
+            </svg>
+            Nom
+            <span class="contact-form__required" aria-label="obligatoire">*</span>
+          </label>
+
+          <input type="text" id="contact-name" name="name" class="contact-form__input" placeholder="Votre nom" required
+            aria-required="true">
+        </div>
+
+
+        <!-- Champ Email -->
+        <div class="contact-form__group">
+          <label class="contact-form__label" for="contact-email">
+            <svg class="contact-form__label-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m4 6 6.108 4.612.002.002c.678.497 1.017.746 1.389.842a2 2 0 0 0 1.002 0c.372-.096.712-.345 1.392-.844 0 0 3.917-3.006 6.107-4.612M3 15.8V8.2c0-1.12 0-1.68.218-2.108.192-.377.497-.682.874-.874C4.52 5 5.08 5 6.2 5h11.6c1.12 0 1.68 0 2.107.218.377.192.683.497.875.874.218.427.218.987.218 2.105v7.607c0 1.118 0 1.676-.218 2.104a2.002 2.002 0 0 1-.875.874c-.427.218-.986.218-2.104.218H6.197c-1.118 0-1.678 0-2.105-.218a2 2 0 0 1-.874-.874C3 17.48 3 16.92 3 15.8Z" />
+            </svg>
+            Email
+            <span class="contact-form__required" aria-label="obligatoire">*</span>
+          </label>
+
+          <input type="email" id="contact-email" name="email" class="contact-form__input"
+            placeholder="votre.email@gmail.com" required aria-required="true">
+        </div>
+
+
+        <!-- Champ Message -->
+        <div class="contact-form__group">
+          <label class="contact-form__label" for="contact-message">
+            <svg class="contact-form__label-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m5.6 19.92 1.524-1.219.01-.008c.318-.255.479-.383.658-.474.16-.082.331-.142.508-.178.199-.041.406-.041.822-.041h8.681c1.118 0 1.678 0 2.105-.218a2 2 0 0 0 .874-.874C21 16.48 21 15.92 21 14.804V7.197c0-1.118 0-1.678-.218-2.105a2.001 2.001 0 0 0-.875-.874C19.48 4 18.92 4 17.8 4H6.2c-1.12 0-1.68 0-2.108.218a1.999 1.999 0 0 0-.874.874C3 5.52 3 6.08 3 7.2v11.471c0 1.066 0 1.599.218 1.872a1 1 0 0 0 .783.377c.35 0 .766-.334 1.599-1Z" />
+            </svg>
+            Message
+            <span class="contact-form__required" aria-label="obligatoire">*</span>
+          </label>
+
+          <textarea id="contact-message" name="message" class="contact-form__textarea" placeholder="Votre message..."
+            rows="8" required aria-required="true"></textarea>
+        </div>
+
+
+        <!-- Bouton Envoyer -->
+        <button type="submit" class="contact-form__submit">
+          <img src="../assets/icons/send.svg" alt="" class="contact-form__submit-icon" aria-hidden="true">
+          Envoyer
+        </button>
+
+        <!-- Note de démonstration -->
+        <div class="contact-form__note">
+          <strong>*</strong> Champs obligatoires. Note : ce formulaire est non fonctionnel et sert uniquement à des fins
+          de démonstration.
+        </div>
+        </form>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer__container">
+      <!-- Logo et nom -->
+      <div class="footer__brand">
+        <!-- Utilisation du chemin correct pour le logo -->
+        <a href="/fr/" class="menu__brand" aria-label="Retour à l’accueil Devlace">
+          <img class="footer__logo" src="../assets/icons/logo_couleur.svg" alt="" width="44" height="44"
+            aria-hidden="true">
+        </a>
+        <span class="footer__brand-text">Devlace</span>
+      </div>
+
+      <!-- Section Article -->
+      <section class="footer__section">
+        <h2 class="footer__heading">Article</h2>
+        <nav aria-label="Navigation articles">
+          <ul class="footer__list">
+            <li><a href="./article_note_g.html" class="footer__link">Note G d'Ada Lovelace</a></li>
+            <li><a href="./article_litterature.html" class="footer__link">Les femmes de science dans la littérature</a>
+            </li>
+            <li><a href="./article_ada.html" class="footer__link">Ada Lovelace : première programmeuse</a></li>
+            <li><a href="./article_film.html" class="footer__link">Radioactive : Marie Curie face à l'effet Matilda</a>
+            </li>
+            <li><a href="./article_livre.html" class="footer__link">Les Oubliées de l'Histoire</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Section Menu -->
+      <section class="footer__section">
+        <h2 class="footer__heading">Menu</h2>
+        <nav aria-label="Navigation principale">
+          <ul class="footer__list">
+            <li><a href="./glossaire.html" class="footer__link">Glossaire</a></li>
+            <li><a href="./autre_projet.html" class="footer__link">Autre projet</a></li>
+            <li><a href="./frise.html" class="footer__link">Frise</a></li>
+            <li><a href="./galerie.html" class="footer__link">Galerie</a></li>
+            <li><a href="./a_propos.html" class="footer__link">À propos</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Section Nous suivre -->
+      <section class="footer__section">
+        <h2 class="footer__heading">Nous suivre</h2>
+        <div class="footer__social">
+          <!-- Utilisation des chemins corrects pour les icônes sociales -->
+          <a href="https://facebook.com" class="footer__social-link" aria-label="Suivez-nous sur Facebook"
+            target="_blank" rel="noopener noreferrer">
+            <img src="../assets/icons/facebook.svg" alt="icons fackebook" aria-hidden="true">
+          </a>
+          <a href="https://instagram.com" class="footer__social-link" aria-label="Suivez-nous sur Instagram"
+            target="_blank" rel="noopener noreferrer">
+            <img src="../assets/icons/instagram.svg" alt="icons instagram" aria-hidden="true">
+          </a>
+          <a href="https://twitter.com" class="footer__social-link" aria-label="Suivez-nous sur X (Twitter)"
+            target="_blank" rel="noopener noreferrer">
+            <img src="../assets/icons/x.svg" alt="icons x" aria-hidden="true">
+          </a>
+          <a href="https://youtube.com" class="footer__social-link" aria-label="Suivez-nous sur YouTube" target="_blank"
+            rel="noopener noreferrer">
+            <img src="../assets/icons/youtube.svg" alt="icons youtube" aria-hidden="true">
+          </a>
+        </div>
+      </section>
+
+      <!-- Section Contact -->
+      <section class="footer__contact">
+        <h3 class="footer__title">Contact</h3>
+        <p class="footer__text">Projet réalisé par Pierre Mouilleseaux Lhuillier</p>
+        <div class="footer__contact-item">
+          <img src="../assets/icons/mail.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+          <a href="mailto:Devlance@gmail.com" class="footer__contact-link">Devlance@gmail.com</a>
+        </div>
+        <div class="footer__contact-item">
+          <img src="../assets/icons/phone.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+          <a href="tel:0707002112" class="footer__contact-link">07 07 00 21 12</a>
+        </div>
+      </section>
+
+      <!-- Crédits -->
+      <div class="footer__credits">
+        <p class="footer__text">Projet réalisé en 2025 dans le cadre d'un exercice pédagogique au département <a
+            href="https://www.iut-nfc.univ-fcomte.fr/" target="_blank" rel="noopener noreferrer"
+            class="footer__mmi-link">MMi de
+            Montbéliard</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

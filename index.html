@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Choix de la langue — L'Effet Matilda" />
+    <title>Choisir la langue — L'Effet Matilda</title>
+
+    <link rel="stylesheet" href="/src/css/components/redirection.css">
+    <link rel="stylesheet" href="/src/css/utils/variables.css">
+</head>
+
+<!--Favicon-->
+<link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon/apple-touch-icon.png" />
+<link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Devlace" />
+<link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+<body>
+    <main class="redirect-page" aria-labelledby="redirect-title">
+        <section class="redirect-card">
+            <h1 id="redirect-title" class="redirect-title">L’Effet Matilda</h1>
+            <p class="redirect-subtitle">Choisissez votre langue</p>
+
+            <p class="redirect-text">
+                Vous allez être redirigé automatiquement vers la bonne version du site.
+                Si ce n’est pas le cas, choisissez ci-dessous :
+            </p>
+
+            <div class="redirect-langs">
+                <a href="fr/index.html" class="boutton boutton--primary" hreflang="fr"
+                    aria-label="Accéder au site en français">
+                    <span class="boutton__label">Site en français</span>
+                </a>
+
+                <a href="en/index.html" class="boutton boutton--secondary" hreflang="en"
+                    aria-label="Access the English version of the site">
+                    <span class="boutton__label">Site in English</span>
+                </a>
+            </div>
+
+            <p class="redirect-hint">
+                Si le problème persiste, vérifiez l’adresse ou rechargez la page.
+            </p>
+        </section>
+    </main>
+
+    <!-- Liens hreflang (SEO / indexation) -->
+    <link rel="alternate" hreflang="fr" href="fr/index.html" />
+    <link rel="alternate" hreflang="en" href="en/index.html" />
+</body>
+
+</html>

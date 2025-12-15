@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="fr" data-theme="dark-theme">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description"
+    content="L'Effet Matilda : Découvrez les histoires de pionnières oubliées qui ont façonné notre monde scientifique" />
+  <title>L'Effet Matilda — Devlace</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../src/css/style.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+  </style>
+
+  <script type="module" src="../src/js/script.js"></script>
+
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Devlace" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="header__bar">
+      <!-- Brand (gauche) -->
+      <a class="header__brand" href="./" aria-label="Retour à l'accueil Devlace">
+        <!-- Logo avec fond violet foncé arrondi -->
+        <img class="header__brand-icon" src="../assets/icons/logo_couleur.svg" alt="Logo Devlace">
+        <span class="header__brand-text">Devlace</span>
+      </a>
+
+      <!-- Actions (droite) : lune → FR → burger -->
+      <div class="header__actions">
+        <!-- Lune - soleil -->
+        <button class="header__theme-toggle" data-btn="theme" type="button" aria-label="Basculer le thème"
+          aria-pressed="false">
+          <span class="header__theme-icon-wrapper" aria-hidden="true">
+            <!-- Lune -->
+            <svg class="header__theme-icon header__theme-icon--moon" viewBox="0 0 32 32">
+              <path
+                d="M12 8c0 6.627 5.373 12 12 12 1.212 0 2.383-.18 3.486-.514C25.992 24.414 21.416 28 16 28 9.373 28 4 22.628 4 16c0-5.415 3.587-9.992 8.514-11.486A12 12 0 0 0 12 8Z"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <!-- Soleil -->
+            <svg class="header__theme-icon header__theme-icon--sun" viewBox="0 0 32 32">
+              <path
+                d="M16 5.333V2.667m0 24v2.666M8.552 8.553 6.667 6.666m16.97 16.97 1.886 1.886M5.333 16H2.666m24 0h2.667m-5.695-7.448 1.885-1.885m-16.97 16.97-1.886 1.886M16 22.667a6.667 6.667 0 1 1 0-13.334 6.667 6.667 0 0 1 0 13.334Z"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </button>
+        <!-- FR remplacé par l'image SVG boutton_fr.svg -->
+        <a class="header__lang" href="/en/index.html" aria-label="Aller vers la version anglaise du site">
+          <img src="../assets/icons/boutton_fr.svg" alt="FR">
+        </a>
+        <!-- Burger -->
+        <button class="header__burger" data-btn="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+          aria-controls="menu">
+          <span class="header__burger-line" aria-hidden="true"></span>
+          <span class="header__burger-line" aria-hidden="true"></span>
+          <span class="header__burger-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= OVERLAY MENU ================= -->
+  <div class="menu" id="menu" hidden aria-hidden="true">
+    <div class="menu__panel" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+      <div class="menu__head">
+        <div class="menu__brand">
+          <a href="/fr/" class="menu__brand" aria-label="Retour à l’accueil Devlace">
+            <img src="../assets/icons/logo_blanc.svg" alt="logo blanc devlance" class="menu__logo" aria-hidden="true">
+          </a>
+          <h2 id="menuTitle" class="menu__title">Menu</h2>
+        </div>
+        <button class="menu__close" data-btn="menu-close" type="button" aria-label="Fermer le menu">
+          <span class="menu__close-x" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <nav class="menu__nav" aria-label="Navigation principale">
+        <ul class="menu__list">
+          <li><a href="./article_ada.html" class="menu__item">Ada Lovelace</a></li>
+          <li><a href="./article_note_g.html" class="menu__item">le premier programme<br>informatique publié</a></li>
+          <li><a href="./article_film.html" class="menu__item">Radioactif le film</a></li>
+          <li><a href="./article_livre.html" class="menu__item">Le livre : les oubliées de l'histoire</a></li>
+          <li><a href="./article_litterature.html" class="menu__item">les femmes de science dans la littérature</a></li>
+          <li><a href="./frise.html" class="menu__item">Frise</a></li>
+          <li><a href="./autre_projet.html" class="menu__item">Autre projet</a></li>
+          <li><a href="./galerie.html" class="menu__item">Galerie</a></li>
+          <li><a href="./glossaire.html" class="menu__item">Glossaire</a></li>
+          <li><a href="./contact.html" class="menu__item">Contact</a></li>
+          <li><a href="./a_propos.html" class="menu__item">À propos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main">
+    <!-- Séparation en deux sections distinctes : hero et timeline -->
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__container">
+        <div class="hero__content">
+          <h1 id="hero-title" class="hero__title">L'Effet Matilda</h1>
+
+          <p class="hero__subtitle">
+            Quand les découvertes scientifiques des femmes sont attribuées à leurs collègues masculins
+          </p>
+
+          <p class="hero__description">
+            Découvrez les histoires de pionnières oubliées qui ont façonné notre monde
+          </p>
+
+          <div class="hero__actions">
+            <a href="./article_ada.html" class="btn btn--primary"
+              aria-label="Explorer tous les articles sur l'Effet Matilda">
+              Explorer les articles
+              <svg class="boutton__icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="var(--color-white)"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <a href="./a_propos.html" class="btn btn--secondary">
+              En savoir plus
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section (séparée) -->
+    <section class="timeline" aria-labelledby="timeline-title">
+      <h2 id="timeline-title" class="sr-only">Chronologie de l'Effet Matilda</h2>
+
+      <ul class="timeline__list" role="list">
+        <li class="timeline__item">
+          <div class="timeline__card">
+            <time class="timeline__year" datetime="1843">Ada Lovelace</time>
+            <p class="timeline__text">Première programmeuse de l’histoire</p>
+          </div>
+        </li>
+
+        <li class="timeline__item">
+          <div class="timeline__card">
+            <time class="timeline__year" datetime="1982">Marie Curie</time>
+            <p class="timeline__text">Le terme "Effet Matilda" est créé</p>
+          </div>
+        </li>
+
+        <li class="timeline__item">
+          <div class="timeline__card">
+            <time class="timeline__year" datetime="1993">Grace Hopper</time>
+            <p class="timeline__text">Pionnière du premier compilateur</p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Scroll indicator -->
+      <div class="timeline__scroll" aria-hidden="true">
+        <svg class="boutton__icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M25.334 12L16 21.333 6.667 12" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Section des cartes d'articles -->
+    <section class="cards-navigation" aria-labelledby="cards-title">
+      <h2 id="cards-title" class="sr-only">Articles sur l'Effet Matilda</h2>
+
+      <div class="cards-navigation__container">
+        <!-- Card 1: Ada Lovelace -->
+        <article class="card-navigation">
+          <div class="card-navigation__image">
+            <img src="../assets/img/portrait_ada_lovelace.avif" alt="Portrait d'Ada Lovelace"
+              class="card-navigation__img" lazy="loading">
+          </div>
+          <div class="card-navigation__content">
+            <h3 class="card-navigation__title">
+              Ada Lovelace : première programmeuse de l'histoire
+            </h3>
+            <p class="card-navigation__description">
+              Découvrez l'histoire fascinante d'Ada Lovelace, mathématicienne
+              visionnaire du XIXe siècle.
+            </p>
+            <a href="./article_ada.html" class="card-navigation__cta" aria-label="Lire l'article sur Ada Lovelace">
+              Lire la suite
+              <svg class="card-navigation__cta-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: Effet Matilda -->
+        <article class="card-navigation">
+          <div class="card-navigation__image">
+            <img src="../assets/img/livre_les_oubliees_de_l_histoire.avif" alt="Portrait illustrant l'effet Matilda"
+              class="card-navigation__img" lazy="loading">
+          </div>
+          <div class="card-navigation__content">
+            <h3 class="card-navigation__title">
+              Réparer l'oubli, comprendre l'effet Matilda
+            </h3>
+            <p class="card-navigation__description">
+              17 portraits de femmes, 17 parcours de battantes qui forcent le respect
+              et l'admiration
+            </p>
+            <a href="./article_livre.html" class="card-navigation__cta"
+              aria-label="Lire l'article sur le livre Les oubliées de l'histoire">
+              Lire la suite
+              <svg class="card-navigation__cta-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: Marie Curie -->
+        <article class="card-navigation">
+          <div class="card-navigation__image">
+            <img src="../assets/img/affiche_radioactive.avif" alt="Image du film Radioactive"
+              class="card-navigation__img" lazy="loading">
+          </div>
+          <div class="card-navigation__content">
+            <h3 class="card-navigation__title">
+              Radioactive : Marie Curie au cinéma
+            </h3>
+            <p class="card-navigation__description">
+              Découvrez l'histoire passionnante de Marie Curie à travers le film
+              Radioactive, biopic marquant.
+            </p>
+            <a href="./article_film.html" class="card-navigation__cta"
+              aria-label="Lire l'article sur le film Radioactive">
+              Lire la suite
+              <svg class="card-navigation__cta-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 4: Écrire les femmes de science -->
+        <article class="card-navigation">
+          <div class="card-navigation__image">
+            <img src="../assets/img/ecrire_les_femmes_de_science.avif"
+              alt="Illustration représentant les femmes de science" class="card-navigation__img" lazy="loading"
+              lazy="loading">
+          </div>
+          <div class="card-navigation__content">
+            <h3 class="card-navigation__title">
+              Écrire les femmes de science
+            </h3>
+            <p class="card-navigation__description">
+              De la "muse" à l'autrice : comment les livres participent à rendre
+              visibles les contributions scientifiques.
+            </p>
+            <a href="./article_litterature.html" class="card-navigation__cta"
+              aria-label="Lire l'article sur les femmes de science dans la littérature">
+              Lire la suite
+              <svg class="card-navigation__cta-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 5: Note G d'Ada Lovelace -->
+        <article class="card-navigation">
+          <div class="card-navigation__image">
+            <img src="../assets/img/ada_lovelace_la_note_g.avif"
+              alt="Portrait d'Ada Lovelace avec des notes manuscrites" class="card-navigation__img" lazy="loading">
+          </div>
+          <div class="card-navigation__content">
+            <h3 class="card-navigation__title">
+              Ada Lovelace la note G : son premier programme
+            </h3>
+            <p class="card-navigation__description">
+              Ada Lovelace explique, en 1843, comment faire exécuter une suite
+              d'instructions à une machine.
+            </p>
+            <a href="./article_note_g.html" class="card-navigation__cta"
+              aria-label="Lire l'article sur la note G d'Ada Lovelace">
+              Lire la suite
+              <svg class="card-navigation__cta-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- Section Explorer davantage -->
+    <section class="explore" aria-labelledby="explore-title">
+      <h2 id="explore-title" class="explore__title">Explorer davantage</h2>
+
+      <div class="explore__container">
+        <!-- Card Nav 1: Frise chronologique -->
+        <a href="./frise.html" class="card-nav card-nav--violet" aria-label="Accéder à la frise chronologique">
+          <svg class="card-nav__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+            <path
+              d="M13.334 3.333V10m13.332-6.667V10m5.001-3.333H8.333A3.333 3.333 0 0 0 5 10v23.333a3.333 3.333 0 0 0 3.333 3.334h23.334A3.333 3.333 0 0 0 35 33.333V10a3.333 3.333 0 0 0-3.333-3.333ZM5 16.667h30"
+              fill="none" stroke="currentColor" stroke-width="3.333" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <h3 class="card-nav__title">Frise chronologique</h3>
+          <p class="card-nav__text">Parcourez les dates clés</p>
+        </a>
+
+        <!-- Card Nav 2: Galerie -->
+        <a href="./galerie.html" class="card-nav card-nav--coral" aria-label="Accéder à la galerie">
+          <svg class="card-nav__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+            <path
+              d="M31.667 5H8.333A3.333 3.333 0 0 0 5 8.333v23.334A3.333 3.333 0 0 0 8.333 35h23.334A3.333 3.333 0 0 0 35 31.667V8.333A3.333 3.333 0 0 0 31.667 5Z"
+              fill="none" stroke="currentColor" stroke-width="3.333" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M15 18.333a3.333 3.333 0 1 0 0-6.666 3.333 3.333 0 0 0 0 6.666ZM35 25l-5.143-5.143a3.333 3.333 0 0 0-4.714 0L10 35"
+              fill="none" stroke="currentColor" stroke-width="3.333" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <h3 class="card-nav__title">Galerie</h3>
+          <p class="card-nav__text">Films et séries inspirants</p>
+        </a>
+
+        <!-- Card Nav 3: À propos -->
+        <a href="./a_propos.html" class="card-nav card-nav--violet" aria-label="En savoir plus à propos">
+          <svg class="card-nav__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+            <path
+              d="M6.667 32.5v-25a4.167 4.167 0 0 1 4.166-4.167h20.834A1.667 1.667 0 0 1 33.332 5v30a1.667 1.667 0 0 1-1.666 1.667H10.832A4.167 4.167 0 0 1 6.666 32.5Zm0 0a4.167 4.167 0 0 1 4.166-4.167h22.5"
+              fill="none" stroke="currentColor" stroke-width="3.333" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <h3 class="card-nav__title">À propos</h3>
+          <p class="card-nav__text">En apprendre plus sur moi</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer__container">
+      <!-- Logo et nom -->
+      <div class="footer__brand">
+        <!-- Utilisation du chemin correct pour le logo -->
+        <a href="/fr/" class="menu__brand" aria-label="Retour à l’accueil Devlace">
+          <img class="footer__logo" src="../assets/icons/logo_couleur.svg" alt="" width="44" height="44"
+            aria-hidden="true">
+        </a>
+        <span class="footer__brand-text">Devlace</span>
+      </div>
+
+      <!-- Section Article -->
+      <section class="footer__section">
+        <h2 class="footer__heading">Article</h2>
+        <nav aria-label="Navigation articles">
+          <ul class="footer__list">
+            <li><a href="./article_note_g.html" class="footer__link">Note G d'Ada Lovelace</a></li>
+            <li><a href="./article_litterature.html" class="footer__link">Les femmes de science dans la littérature</a>
+            </li>
+            <li><a href="./article_ada.html" class="footer__link">Ada Lovelace : première programmeuse</a></li>
+            <li><a href="./article_film.html" class="footer__link">Radioactive : Marie Curie face à l'effet Matilda</a>
+            </li>
+            <li><a href="./article_livre.html" class="footer__link">Les Oubliées de l'Histoire</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Section Menu -->
+      <section class="footer__section">
+        <h2 class="footer__heading">Menu</h2>
+        <nav aria-label="Navigation principale">
+          <ul class="footer__list">
+            <li><a href="./glossaire.html" class="footer__link">Glossaire</a></li>
+            <li><a href="./autre_projet.html" class="footer__link">Autre projet</a></li>
+            <li><a href="./frise.html" class="footer__link">Frise</a></li>
+            <li><a href="./galerie.html" class="footer__link">Galerie</a></li>
+            <li><a href="./a_propos.html" class="footer__link">À propos</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Section Nous suivre -->
+      <section class="footer__section">
+        <h2 class="footer__heading">Nous suivre</h2>
+        <div class="footer__social">
+          <!-- Utilisation des chemins corrects pour les icônes sociales -->
+          <a href="https://facebook.com" class="footer__social-link" aria-label="Suivez-nous sur Facebook"
+            target="_blank" rel="noopener noreferrer">
+            <img src="../assets/icons/facebook.svg" alt="icons fackebook" aria-hidden="true">
+          </a>
+          <a href="https://instagram.com" class="footer__social-link" aria-label="Suivez-nous sur Instagram"
+            target="_blank" rel="noopener noreferrer">
+            <img src="../assets/icons/instagram.svg" alt="icons instagram" aria-hidden="true">
+          </a>
+          <a href="https://twitter.com" class="footer__social-link" aria-label="Suivez-nous sur X (Twitter)"
+            target="_blank" rel="noopener noreferrer">
+            <img src="../assets/icons/x.svg" alt="icons x" aria-hidden="true">
+          </a>
+          <a href="https://youtube.com" class="footer__social-link" aria-label="Suivez-nous sur YouTube" target="_blank"
+            rel="noopener noreferrer">
+            <img src="../assets/icons/youtube.svg" alt="icons youtube" aria-hidden="true">
+          </a>
+        </div>
+      </section>
+
+      <!-- Section Contact -->
+      <section class="footer__contact">
+        <h3 class="footer__title">Contact</h3>
+        <p class="footer__text">Projet réalisé par Pierre Mouilleseaux Lhuillier</p>
+        <div class="footer__contact-item">
+          <img src="../assets/icons/mail.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+          <a href="mailto:Devlance@gmail.com" class="footer__contact-link">Devlance@gmail.com</a>
+        </div>
+        <div class="footer__contact-item">
+          <img src="../assets/icons/phone.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+          <a href="tel:0707002112" class="footer__contact-link">07 07 00 21 12</a>
+        </div>
+      </section>
+
+      <!-- Crédits -->
+      <div class="footer__credits">
+        <p class="footer__text">Projet réalisé en 2025 dans le cadre d'un exercice pédagogique au département <a
+            href="https://www.iut-nfc.univ-fcomte.fr/" target="_blank" rel="noopener noreferrer"
+            class="footer__mmi-link">MMi de
+            Montbéliard</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
