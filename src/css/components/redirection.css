@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--color-white);
+    background: linear-gradient(180deg, #473b5d 0%, #6c5e96 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Page de redirection */
+.redirect-page {
+    position: relative;
+    padding: 3rem 1.5rem;
+    width: 100%;
+    max-width: 32rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Cercle décoratif comme le hero / 404 */
+.redirect-page::before {
+    content: "";
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    width: min(90vw, 22rem);
+    height: min(90vw, 22rem);
+    border-radius: 50%;
+    border: 0.1875rem solid var(--color-coral);
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.redirect-card {
+    position: relative;
+    z-index: 1;
+    background: rgba(244, 236, 224, 0.1);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 2rem 1.5rem 2.25rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.redirect-title {
+    margin: 0 0 0.75rem;
+    font-size: var(--fs-h1);
+    line-height: var(--lh-h1);
+    font-weight: 700;
+}
+
+.redirect-subtitle {
+    margin: 0 0 1.5rem;
+    font-size: var(--fs-body-1);
+    line-height: var(--lh-body-1);
+    color: var(--color-sand);
+}
+
+.redirect-text {
+    margin: 0 0 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.redirect-langs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (min-width: 30rem) {
+    .redirect-langs {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Boutons style Matilda */
+.boutton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    font-size: var(--fs-button);
+    line-height: var(--lh-button);
+    font-weight: 500;
+    border-radius: 999px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+    white-space: nowrap;
+}
+
+.boutton--primary {
+    background: var(--color-coral);
+    color: var(--color-white);
+    box-shadow: 0 0.5rem 1.25rem rgba(232, 137, 107, 0.35);
+}
+
+.boutton--primary:hover {
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.75rem 1.5rem rgba(232, 137, 107, 0.45);
+}
+
+.boutton--secondary {
+    background: transparent;
+    color: var(--color-paper);
+    border: 0.125rem solid var(--color-sand);
+}
+
+.boutton--secondary:hover {
+    background: rgba(244, 236, 224, 0.1);
+    transform: translateY(-0.125rem);
+}
+
+.boutton__label {
+    line-height: 1;
+}
+
+.redirect-hint {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}

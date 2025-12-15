@@ -1,0 +1,223 @@
+/* ===== ABOUT PAGE ===== */
+.about-page {
+    padding: 3rem 1rem;
+    max-width: 56.25rem;
+    /* 900px */
+    margin: 0 auto;
+}
+
+.about-section {
+    margin-bottom: 3rem;
+}
+
+.texte-titre {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-1);
+    color: var(--texte-black);
+    margin: 0 0 1.5rem 0;
+}
+
+.about-section__icon {
+    flex-shrink: 0;
+    width: 2rem;
+    /* 32px */
+    height: 2rem;
+    /* 32px */
+    color: var(--texte-black);
+}
+
+.texte-contenu {
+    font-family: var(--font-body);
+    font-size: var(--fs-body-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    color: var(--texte-black);
+    margin: 0;
+}
+
+.about-section__textV {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-family: var(--font-body);
+    color: var(--texte-violet);
+    margin: 0;
+}
+
+@media (max-width: 48rem) {
+
+    /* 768px */
+    .about-page {
+        padding: 2rem 1rem;
+    }
+
+    .texte-titre {
+        font-size: 1.5rem;
+    }
+
+    .texte-contenu {
+        font-size: 1rem;
+    }
+}
+
+/*================================About Card================================*/
+.about-card {
+    max-width: 40rem;
+    /* optionnel : largeur max de la carte */
+    margin: 0 auto;
+    background: var(--card-fond);
+    border-radius: 1.5rem;
+    /* 24px */
+    /* bordure gauche corail façon Figma */
+    border-left: 0.375rem solid var(--color-corail-violet);
+    /* 6px */
+    padding: 2rem;
+    box-shadow: 0 0.75rem 1.5rem var(--drop-shadow);
+    margin-bottom: 3rem;
+}
+
+/* Titre + icône en ligne */
+.about-card__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 1.5rem 0;
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-1);
+    color: var(--texte-black);
+    /* pas de variable définie pour ce bleu nuit */
+}
+
+.about-card__title-text {
+    flex: 1;
+}
+
+/* Icône "user" à droite du titre */
+.about-card__icon {
+    flex-shrink: 0;
+    width: 2rem;
+    /* 32px */
+    height: 2rem;
+    /* 32px */
+    display: block;
+}
+
+/* Texte de description */
+.about-card__text {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--fs-body-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    color: var(--texte-black);
+    /* même bleu nuit que le titre */
+}
+
+/* Mobile encore plus compact si besoin */
+@media (max-width: 48rem) {
+
+    /* 768px */
+    .about-card {
+        padding: 1.5rem;
+        border-radius: 1.25rem;
+        /* 20px */
+    }
+
+    .about-card__title {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* ===== GLOSSARY PAGE ===== */
+.glossary {
+    padding: 3rem 1rem;
+    max-width: 56.25rem;
+    /* 900px */
+    margin: 0 auto;
+}
+
+.glossary__header {
+    margin-bottom: 3rem;
+}
+
+.glossary__title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--texte-black);
+    margin: 0 0 1rem 0;
+}
+
+.glossary__subtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--texte-black);
+    margin: 0;
+}
+
+.glossary__section {
+    margin-bottom: 3rem;
+}
+
+.glossary__letter {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-yellow);
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1875rem solid var(--color-yellow);
+    /* 3px */
+}
+
+.glossary__entry {
+    margin-bottom: 2rem;
+}
+
+.glossary__term {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--texte-black);
+    margin: 0 0 0.5rem 0;
+}
+
+.glossary__definition {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: var(--font-body);
+    color: var(--texte-black);
+    margin: 0;
+}
+
+@media (max-width: 48rem) {
+
+    /* 768px */
+    .glossary {
+        padding: 2rem 1rem;
+    }
+
+    .glossary__title {
+        font-size: 1.75rem;
+    }
+
+    .glossary__subtitle {
+        font-size: 1rem;
+    }
+
+    .glossary__letter {
+        font-size: 1.25rem;
+    }
+
+    .glossary__term {
+        font-size: 1.125rem;
+    }
+}

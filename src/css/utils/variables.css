@@ -1,0 +1,103 @@
+/* ================================
+   src/css/utils/variables.css — Matilda
+   (palette & typo du guide)
+   ================================ */
+:root {
+  /* --- TYPO --- */
+  --font-heading: "Geologica", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body: "ubuntu-light", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+
+  /* Tailles de texte */
+
+  --fs-h1: 2.375rem;
+  /* 38px */
+  --fs-h2: 2rem;
+  /* 32px */
+  --fs-h3: 1.125rem;
+  /* 18px */
+  --fs-body-1: 1.25rem;
+  /* 20px */
+  --fs-body-2: 1rem;
+  /* 16px */
+  --fs-body-3: 0.875rem;
+  /* 14px */
+  --fs-small: 0.75rem;
+  /* 12px */
+  --fs-button: 1.125rem;
+  /* 18px */
+
+
+  /* hauter de texte */
+
+  --line-height-1: 1.1;
+  /* 110% */
+  --line-height-2: 1.5;
+  /* 150% */
+
+  /* --- COULEURS --- */
+
+  --color-violet-1: #6b5b99;
+
+  --color-violet-2: #5c4c8b;
+
+  --color-lavender: #9787c4;
+
+  --color-coral: #e8896b;
+
+  --color-paper: #f4ece0;
+  --color-paper-2: #fefcf9;
+
+  --color-sand: #e8d5b7;
+  --color-baige: #e8d5b7;
+
+  --color-yellow: #d4af37;
+
+  --color-white: #ffffff;
+  --color-black: #1a1a3e;
+
+  --drop-shadow: rgba(0, 0, 0, 0.25);
+
+
+
+  /*variables qui changenge selon le thème*/
+
+  --fond-page: #ffffff;
+  --card-fond: #ffffff;
+  --card-fond2: #ffffff;
+  --menu-fond: #F6F2EB;
+  --menu-boutton: #ffffff;
+  --color-meta: #f4ece0;
+
+  --texte-black: #1a1a3e;
+  --texte-violet: #5C4C8B;
+
+  --color-violet-changement: #5c4c8b;
+  --color-corail-violet: #e8896b;
+
+}
+
+
+/* Thème sombre */
+
+:root[data-theme="dark"] {
+
+
+  --fond-page: #1A1A3E;
+  --card-fond: #5C4C8B;
+  --card-fond2: #9787C4;
+  --menu-fond: #1A1A3E;
+  --menu-boutton: #0B0B1E;
+  --color-meta: #5c4C8B;
+
+  --texte-black: #ffffff;
+  --texte-violet: #E5DCD7;
+
+  --color-violet-changement: #9787C4;
+  --color-corail-violet: #9787C4;
+
+
+}

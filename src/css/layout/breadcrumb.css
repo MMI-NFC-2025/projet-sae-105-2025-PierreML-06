@@ -1,0 +1,93 @@
+/* ================================
+   src/css/components/breadcrumb.css
+   Fil d'Ariane (BEM)
+   ================================ */
+
+.breadcrumb {
+    background-color: var(--fond-page);
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 1.5rem;
+    /* Ajouter overflow hidden pour cacher le contenu qui dépasse */
+    overflow-x: hidden;
+}
+
+.breadcrumb__list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* Empêcher le retour à la ligne */
+    flex-wrap: nowrap;
+    min-width: min-content;
+}
+
+.breadcrumb__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Empêcher le shrink des items */
+    flex-shrink: 0;
+}
+
+.breadcrumb__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-coral);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: var(--fs-body-3);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    transition: opacity 0.3s ease;
+    /* Empêcher le retour à la ligne du texte */
+    white-space: nowrap;
+}
+
+/* Lien Accueil reste en corail */
+.breadcrumb__link--home {
+    color: var(--color-coral);
+}
+
+/* Liens historiques en noir */
+.breadcrumb__link--history {
+    color: var(--texte-black);
+}
+
+.breadcrumb__link:hover {
+    opacity: 0.7;
+}
+
+.breadcrumb__link:focus {
+    outline: 2px solid var(--color-coral);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.breadcrumb__icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(68%) sepia(22%) saturate(1576%) hue-rotate(324deg) brightness(95%) contrast(92%);
+    /* Empêcher le shrink de l'icône */
+    flex-shrink: 0;
+}
+
+.breadcrumb__separator {
+    color: var(--texte-black);
+    font-size: 1.2rem;
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    user-select: none;
+}
+
+/* Page actuelle en orange */
+.breadcrumb__current {
+    color: var(--color-coral);
+    font-size: var(--fs-body-3);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    font-family: var(--font-body);
+    white-space: nowrap;
+}

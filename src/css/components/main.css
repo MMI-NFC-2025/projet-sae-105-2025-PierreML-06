@@ -1,0 +1,52 @@
+/* ===== BASE ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--fs-body-1);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    color: var(--texte-black);
+    background: var(--fond-page);
+    overflow-x: hidden;
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 0.0625rem;
+    /* 1px */
+    height: 0.0625rem;
+    /* 1px */
+    padding: 0;
+    margin: -0.0625rem;
+    /* -1px */
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ===== PRINT ===== */
+@media print {
+
+    .site-header,
+    .menu-overlay,
+    .scroll-indicator {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        page-break-after: always;
+    }
+}

@@ -1,0 +1,196 @@
+/* ===============================
+   Frise Component
+   =============================== */
+
+.frise {
+    position: relative;
+    padding: 2rem 1rem;
+    margin: 3rem 0;
+    /* fond blanc par défaut */
+}
+
+/* Vertical line */
+.frise::before {
+    content: "";
+    position: absolute;
+    left: 4.0625rem;
+    /* 65px */
+    top: 4rem;
+    bottom: 18rem;
+    width: 0.25rem;
+    /* 4px */
+    background-color: var(--color-violet-2);
+}
+
+.frise__item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Date badges */
+.frise__date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1.5625rem;
+    /* 25px */
+    font-family: var(--font-heading);
+    font-size: var(--fs-body-2);
+    font-weight: var(--weight-blod);
+    color: var(--color-white);
+    min-width: 6.875rem;
+    /* 110px */
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.frise__date--purple {
+    background-color: var(--color-violet-2);
+
+}
+
+.frise__date--coral {
+    background-color: var(--color-coral);
+}
+
+/* Connector from date to card */
+.frise__connector {
+    position: absolute;
+    left: 6.875rem;
+    /* 110px */
+    top: 1.75rem;
+    /* 28px */
+    width: 2.5rem;
+    /* 40px */
+    height: 0.25rem;
+    /* 4px */
+    background-color: var(--color-corail-violet);
+    z-index: 0;
+    /* passe sous les cartes */
+}
+
+/* Content card */
+.frise__content {
+    background-color: var(--card-fond);
+    border-left: 0.25rem solid var(--color-corail-violet);
+    /* 4px */
+    border-radius: 0.75rem;
+    /* 12px */
+    padding: 1.5rem;
+    box-shadow: 0 0.25rem 0.5rem var(--drop-shadow);
+    /* 0 4px 8px */
+    position: relative;
+    z-index: 1;
+    /* au-dessus des connecteurs */
+    flex: 1;
+}
+
+.frise__title {
+    font-family: var(--font-body);
+    font-size: var(--fs-body-1);
+    font-weight: var(--weight-regular);
+    color: var(--texte-black);
+    line-height: var(--line-height-2);
+    /* pas de variable définie pour cette couleur */
+    margin: 0 0 0.75rem 0;
+}
+
+.frise__text {
+    font-family: var(--font-body);
+    font-size: var(--fs-body-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    color: var(--texte-violet);
+    margin: 0;
+}
+
+.frise__item:has(.frise__btn) .frise__text {
+    margin-bottom: 1.25rem;
+}
+
+/* "En savoir plus" button */
+.frise__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background-color: var(--color-corail-violet);
+    color: var(--color-white);
+    font-family: var(--font-bodu);
+    font-size: var(--fs-button);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-1);
+    text-decoration: none;
+    border-radius: 1.875rem;
+    /* 30px */
+    margin-top: 1rem;
+}
+
+.frise__btn:hover {
+    background-color: var(--color-coral);
+    /* pas de variable définie pour cette couleur */
+}
+
+.frise__btn:focus-visible {
+    outline: 0.1875rem solid var(--color-violet-2);
+    /* 3px */
+    outline-offset: 0.125rem;
+    /* 2px */
+}
+
+.frise__btn svg {
+    flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 48rem) {
+
+    /* 768px */
+    .frise::before {
+        left: 3.125rem;
+        /* 50px */
+    }
+
+    .frise__item {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .frise__date {
+        font-size: 1rem;
+        padding: 0.625rem 1.125rem;
+        min-width: 5.625rem;
+        /* 90px */
+    }
+
+    .frise__connector {
+        left: 5.625rem;
+        /* 90px */
+        width: 1.5625rem;
+        /* 25px */
+        top: 1.375rem;
+        /* 22px */
+    }
+
+    .frise__content {
+        padding: 1.25rem;
+    }
+
+    .frise__title {
+        font-size: 1.125rem;
+    }
+
+    .frise__text {
+        font-size: 0.9375rem;
+    }
+
+    .frise__btn {
+        font-size: 0.9375rem;
+        padding: 0.75rem 1.5rem;
+    }
+}

@@ -1,0 +1,260 @@
+/* ================================
+   src/css/layout/header.css
+   Header uniquement (Mobile First)
+   Méthodologie BEM
+   ================================ */
+
+/* Garde-fous */
+html,
+body {
+  margin: 0;
+}
+
+/* ===== HEADER ===== */
+
+/* Bloc principal */
+.header {
+  position: relative;
+  z-index: 100;
+  color: var(--color-white);
+}
+
+/* Fond violet qui prend toute la largeur de la fenêtre */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: var(--color-violet-1);
+  z-index: -1;
+}
+
+/* Barre de contenu (logo + actions) */
+.header__bar {
+  max-width: 70rem;
+  /* 1120px */
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  /* 16px 20px */
+  padding-top: calc(1rem + env(safe-area-inset-top));
+  /* 16px + safe area */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* brand à gauche, le reste poussé à droite */
+  box-sizing: border-box;
+}
+
+/* ===== BRAND (logo + titre) ===== */
+
+.header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  /* 12px */
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+/* Logo (icône) */
+.header__brand-icon {
+  width: 2.75rem;
+  /* 44px */
+  height: 2.75rem;
+  /* 44px */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Texte Devlace */
+.header__brand-text {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-2);
+  line-height: var(--line-height-2);
+  font-weight: var(--weight-regular);
+  letter-spacing: 0.02em;
+}
+
+/* ===== ACTIONS (lune + FR + burger) ===== */
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* 16px */
+  margin-left: auto;
+  /* pousse tout le bloc à droite */
+}
+
+/* Boutons génériques (lune, langue, burger) */
+.header__theme-toggle,
+.header__lang,
+.header__burger {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Couleur lune */
+.header__theme-toggle {
+  color: var(--color-sand);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Conteneur qui va tourner */
+.header__theme-icon-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 1.5rem;
+  /* 24px */
+  height: 1.5rem;
+  /* 24px */
+  transition: transform 0.45s ease;
+}
+
+/* Icônes superposées */
+.header__theme-icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform-origin: 50% 50%;
+}
+
+/* État clair : on voit la lune */
+.header__theme-icon--moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.header__theme-icon--sun {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+/* Quand on active le thème sombre : rotation + swap des icônes */
+.dark-theme .header__theme-icon-wrapper {
+  transform: rotate(360deg);
+}
+
+.dark-theme .header__theme-icon--moon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+.dark-theme .header__theme-icon--sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Bouton FR : carré 44×44 avec l'image SVG */
+.header__lang {
+  width: 2.75rem;
+  /* 44px */
+  height: 2.75rem;
+  /* 44px */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  text-decoration: none;
+  /* utile si c’est un <a> */
+}
+
+.header__lang img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ===== BURGER ===== */
+
+/* Bouton burger : carré 44×44 (2.75rem) */
+.header__burger {
+  position: relative;
+  width: 2.75rem;
+  /* 44px */
+  height: 2.75rem;
+  /* 44px */
+  flex-shrink: 0;
+
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lignes du burger */
+.header__burger-line {
+  position: absolute;
+  left: 50%;
+  width: 1.625rem;
+  /* 26px */
+  height: 0.1875rem;
+  /* 3px */
+  border-radius: 999px;
+  background: var(--color-white);
+  transform: translateX(-50%);
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease,
+    top 0.25s ease;
+}
+
+/* Positions des 3 lignes (état fermé) */
+.header__burger-line:nth-child(1) {
+  top: 0.6875rem;
+  /* 11px */
+}
+
+.header__burger-line:nth-child(2) {
+  top: 1.25rem;
+  /* 20px */
+}
+
+.header__burger-line:nth-child(3) {
+  top: 1.8125rem;
+  /* 29px */
+}
+
+/* État ouvert (aria-expanded="true") : on fait une croix */
+.header__burger[aria-expanded="true"] .header__burger-line:nth-child(1) {
+  top: 1.25rem;
+  /* se met au centre */
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.header__burger[aria-expanded="true"] .header__burger-line:nth-child(2) {
+  opacity: 0;
+  /* barre du milieu disparaît */
+}
+
+.header__burger[aria-expanded="true"] .header__burger-line:nth-child(3) {
+  top: 1.25rem;
+  /* se met au centre */
+  transform: translateX(-50%) rotate(-45deg);
+}

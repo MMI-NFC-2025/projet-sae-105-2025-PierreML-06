@@ -1,0 +1,164 @@
+/* ================================
+   src/css/components/menu.css
+   Menu Overlay (Mobile First uniquement)
+   Méthodologie BEM
+   ================================ */
+
+/* ===== MENU OVERLAY ===== */
+
+/* Refactorisation en BEM - .menu est le bloc principal */
+
+/* Panneau overlay
+   -> On utilise opacity + visibility pour pouvoir animer l'apparition,
+      au lieu de display:none/block qui n'est pas animable. */
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: var(--menu-fond);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* État ouvert : le menu devient visible et opaque */
+.menu--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Par défaut, l’attribut HTML `hidden` force display:none.
+   On le neutralise ici pour que l’overlay reste présent dans le flow
+   et puisse être animé. C’est opacity/visibility qui masquent visuellement. */
+.menu[hidden] {
+  display: block;
+}
+
+/* Panneau interne : slide depuis la droite */
+.menu__panel {
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  transform: translateX(100%);
+  transition: transform 0.4s ease 0.1s;
+  /* petite delay après le fond */
+}
+
+/* Quand le menu est ouvert, le panneau glisse en place */
+.menu--open .menu__panel {
+  transform: translateX(0);
+}
+
+/* Head du panneau */
+.menu__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  /* 16px 20px */
+  border-bottom: 1px solid var(--texte-black);
+}
+
+.menu__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  /* 10px */
+}
+
+.menu__logo {
+  width: 2.75rem;
+  /* 44px */
+  height: 2.75rem;
+  /* 44px */
+  border-radius: 50%;
+  background: var(--fond-page);
+  padding: 0.5rem;
+  /* 8px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__title {
+  margin: 0;
+  color: var(--texte-black);
+  font-family: var(--font-hrading);
+  font-weight: var(--weight-bold);
+  font-size: var(--fs-h3);
+  line-height: var(--line-height-1);
+}
+
+/* Bouton X */
+.menu__close {
+  all: unset;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  width: 2.75rem;
+  /* 44px */
+  height: 2.75rem;
+  /* 44px */
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__close:focus-visible {
+  outline: 2px solid var(--color-coral);
+  outline-offset: 2px;
+}
+
+.menu__close-x,
+.menu__close-x::after {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  /* 24px */
+  height: 0.1875rem;
+  /* 3px */
+  border-radius: 0.1875rem;
+  /* 3px */
+  background: var(--texte-black);
+}
+
+.menu__close-x {
+  transform: rotate(45deg);
+}
+
+.menu__close-x::after {
+  transform: rotate(90deg);
+}
+
+/* Navigation */
+.menu__nav {
+  overflow: auto;
+  padding: 1.25rem 1.25rem 2.5rem;
+  /* 20px 20px 40px */
+}
+
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+  /* 12px */
+}
+
+.menu__item {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  /* 20px 24px */
+  background: var(--menu-boutton);
+  color: var(--texte-black);
+  font-family: var(--font-body);
+  font-size: var(--fs-button);
+  line-height: var(--line-height-1);
+  font-weight: var(--weight-regular);
+  border-radius: 1.25rem;
+  /* 20px */
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}

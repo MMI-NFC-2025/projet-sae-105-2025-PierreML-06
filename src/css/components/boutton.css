@@ -1,0 +1,96 @@
+/* ================================
+   Composant Boutton (Button)
+   ================================ */
+
+/* Wrapper pour centrer le bouton */
+.boutton-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* Styles de base du bouton */
+.boutton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    border-radius: 3.125rem;
+    /* 50px */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Variant principal violet */
+.boutton--primary {
+    background-color: var(--color-violet-1);
+    /* #6b5b99 */
+    color: var(--color-white);
+}
+
+.boutton--primary:hover {
+    background-color: var(--color-violet-2);
+    /* variante foncée définie dans variables.css */
+    transform: translateY(-0.125rem);
+    /* -2px */
+    box-shadow: 0 0.25rem 0.75rem rgba(107, 91, 153, 0.3);
+    /* 0 4px 12px */
+}
+
+.boutton--primary:active {
+    transform: translateY(0);
+}
+
+/* Variant secondaire corail */
+.boutton--secondary {
+    background-color: var(--color-coral);
+    /* #e8896b */
+    color: var(--color-white);
+}
+
+.boutton--secondary:hover {
+    background-color: var(--color-coral);
+    /* pas de variable définie pour ce corail foncé */
+    transform: translateY(-0.125rem);
+    /* -2px */
+    box-shadow: 0 0.25rem 0.75rem rgba(232, 137, 107, 0.3);
+    /* 0 4px 12px */
+}
+
+.boutton--secondary:active {
+    transform: translateY(0);
+}
+
+/* Texte du bouton */
+.boutton__text {
+    line-height: 1;
+}
+
+/* Icône du bouton (SVG inline) */
+.boutton__icon {
+    /* SVG devient blanc ! */
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+}
+
+.timeline__scroll .boutton__icon {
+    color: var(--color-white);
+}
+
+/* Responsive */
+@media (max-width: 48rem) {
+
+    /* 768px */
+    .boutton {
+        font-size: 1rem;
+        padding: 0.875rem 2rem;
+    }
+}

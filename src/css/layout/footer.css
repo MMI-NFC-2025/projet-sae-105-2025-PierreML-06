@@ -1,0 +1,196 @@
+/* ================================
+   Footer — BEM
+   ================================ */
+
+.footer {
+    /* Dégradé violet de #1A1A3E vers #5A4A89 */
+    background: linear-gradient(180deg, var(--color-black) 0%, #5a4a89 100%);
+    color: var(--color-white);
+    padding: 3rem 1.5rem 2rem;
+}
+
+.footer__container {
+    max-width: 25rem;
+    /* 400px */
+    margin: 0 auto;
+}
+
+/* Brand */
+.footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Logo remplit maintenant tout le container */
+.footer__logo {
+    width: 3.75rem;
+    /* 60px */
+    height: 3.75rem;
+    /* 60px */
+    border-radius: 0.75rem;
+    /* 12px */
+    background: rgba(255, 255, 255, 0.1);
+    display: block;
+    object-fit: cover;
+}
+
+.footer__brand-text {
+    font-family: var(--font-body);
+    font-size: var(--fs-body-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+}
+
+/* Sections */
+.footer__section {
+    margin-bottom: 2rem;
+}
+
+.footer__heading {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-1);
+    margin: 0 0 1rem;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer__link {
+    color: var(--color-white);
+    font-family: var(--font-body);
+    text-decoration: none;
+    font-size: var(--fs-button);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    transition: opacity 0.2s ease;
+    display: inline-block;
+}
+
+.footer__link:hover,
+.footer__link:focus {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Social */
+.footer__social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer__social-link {
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+}
+
+.footer__social-link:hover,
+.footer__social-link:focus {
+    opacity: 0.8;
+}
+
+.footer__social-icon {
+    width: 2rem;
+    /* 32px */
+    height: 2rem;
+    /* 32px */
+}
+
+/* Section contact centrée avec couleur #E8D5B7 */
+.footer__contact {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Le titre Contact garde la couleur blanche et la grande taille */
+.footer__contact .footer__heading {
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+.footer__text {
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    line-height: var(--line-height-2);
+    font-weight: var(--weight-regular);
+    margin: 0 0 1rem;
+    color: var(--color-sand);
+    /* #e8d5b7 */
+}
+
+
+.footer__contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer__contact-icon {
+    width: 1.25rem;
+    /* 20px */
+    height: 1.25rem;
+    /* 20px */
+    filter: brightness(0) saturate(100%) invert(87%) sepia(14%) saturate(590%) hue-rotate(337deg) brightness(100%) contrast(89%);
+}
+
+.footer__title {
+    font-family: var(--font-body);
+    font-size: var(--fs-body-1);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    color: var(--color-sand);
+}
+
+.footer__contact-link {
+    color: var(--color-sand);
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    line-height: var(--line-height-2);
+    font-weight: var(--weight-regular);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.footer__contact-link:hover,
+.footer__contact-link:focus {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Credits */
+.footer__credits {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+.footer__credits {
+    text-align: center;
+    color: var(--color-sand);
+}
+
+/* Lien MMI cliquable avec style */
+.footer__mmi-link {
+    color: var(--color-sand);
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+}
+
+.footer__mmi-link:hover,
+.footer__mmi-link:focus {
+    opacity: 0.8;
+}

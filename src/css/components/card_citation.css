@@ -1,0 +1,60 @@
+/* ================================
+   Card Citation Component
+   ================================ */
+
+.card-citation {
+    background-color: var(--color-paper);
+    border-left: 0.25rem solid var(--color-coral);
+    /* 4px */
+    border-radius: 0 1.5rem 1.5rem 0;
+    /* Gauc he = 0, Droite = rond */
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 0.25rem 0.25rem 0 var(--drop-shadow);
+    position: relative;
+}
+
+.card-citation-violet {
+    background-color: var(--color-paper);
+    border-left: 0.25rem solid var(--color-violet-2);
+    border-radius: 0 1.5rem 1.5rem 0;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 0.25rem 0.25rem 0 var(--drop-shadow);
+    position: relative;
+}
+
+
+.card-citation__text {
+    font-family: var(--font-body);
+    font-size: var(--fs-body1);
+    line-height: var(--line-height-2);
+    color: var(--color-black);
+    /* #5c4c8b */
+    margin: 0;
+    font-weight: var(--weight-regular);
+    padding-right: 3rem;
+}
+
+.card-citation__author {
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    color: var(--color-violet-1);
+    /* #6b5b99 */
+    margin: 1rem 0 0 0;
+    font-style: normal;
+}
+
+/* Responsive */
+/* Mobile */
+@media (max-width: 48rem) {
+
+    .card-citation,
+    .card-citation-violet {
+        padding: 1.5rem;
+        /* on garde les mêmes coins pour rester cohérent maquette */
+        border-radius: 0 1.25rem 1.25rem 0;
+    }
+}

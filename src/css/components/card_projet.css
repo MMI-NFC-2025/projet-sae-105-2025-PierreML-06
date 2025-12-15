@@ -1,0 +1,128 @@
+/* ===============================================
+   CARD PROJET - Cartes de projets
+   =============================================== */
+
+.project-cards-container {
+    max-width: 50rem;
+    /* 800px */
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-projet {
+    background: var(--card-fond);
+    border-radius: 0.75rem;
+    /* 12px */
+    box-shadow: 0 0.25rem 0.75rem var(--drop-shadow);
+    /* 0 4px 12px */
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Bordure gauche selon la variante */
+.card-projet--coral {
+    border-left: 0.25rem solid var(--color-coral);
+    /* 4px */
+}
+
+.card-projet--purple {
+    border-left: 0.25rem solid var(--color-violet-changement);
+    /* 4px */
+}
+
+/* Header avec titre, auteur et icône */
+.card-projet__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.card-projet__text {
+    flex: 1;
+}
+
+.card-projet__title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-1);
+    color: var(--texte-black);
+    /* pas de variable définie pour cette couleur */
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+}
+
+.card-projet__author {
+    font-family: var(--font-body);
+    font-size: var(--fs-body-1);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    color: var(--texte-black);
+    /* pas de variable définie pour cette couleur */
+    margin: 0;
+}
+
+/* Icône du projet */
+.card-projet__icon {
+    width: 5rem;
+    /* 80px */
+    height: 5rem;
+    /* 80px */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-projet__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Bouton */
+.card-projet__button {
+    align-self: center;
+    min-width: 17.5rem;
+    /* 280px */
+}
+
+/* Responsive */
+@media (max-width: 40rem) {
+
+    /* 640px */
+    .project-cards-container {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+
+    .card-projet {
+        padding: 1.5rem;
+    }
+
+    .card-projet__title {
+        font-size: 1.5rem;
+    }
+
+    .card-projet__author {
+        font-size: 1rem;
+    }
+
+    .card-projet__icon {
+        width: 3.75rem;
+        /* 60px */
+        height: 3.75rem;
+        /* 60px */
+    }
+
+    .card-projet__button {
+        min-width: 100%;
+    }
+}

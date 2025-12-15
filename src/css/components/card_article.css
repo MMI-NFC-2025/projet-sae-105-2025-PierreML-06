@@ -1,0 +1,174 @@
+/* ===============================================
+   CARTE MÉTADONNÉES D'ARTICLE
+   =============================================== */
+
+.article-meta {
+    background-color: var(--color-meta);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Ligne horizontale date + auteur */
+.article-meta__row {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.article-meta__item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.article-meta__icon {
+    color: var(--texte-violet);
+    flex-shrink: 0;
+    width: 1.5rem;
+    /* 24px */
+    height: 1.5rem;
+    /* 24px */
+}
+
+.article-meta__text {
+    color: var(--texte-violet);
+    font-size: var(--fs-body-2);
+    font-weight: var(--weight-regular);
+    /* 1rem */
+    line-height: var(--lh-body-2);
+}
+
+/* Responsive */
+@media (max-width: 48rem) {
+    .article-meta {
+        padding: 1.25rem;
+    }
+
+    .article-meta__text {
+        font-size: var(--fs-body-3);
+        /* 0.875rem */
+    }
+
+    /* On ne passe plus en colonne, on réduit juste l’écart */
+    .article-meta__row {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        /* au cas où ça squeeze un peu */
+        align-items: center;
+    }
+}
+
+/* ===============================================
+   CITATION D'ARTICLE (orange)
+   =============================================== */
+
+.article-quote {
+    background-color: var(--card-fond2);
+    border-left: 0.25rem solid var(--color-coral);
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 0.25rem 0.25rem var(--drop-shadow);
+    color: var(--texte-violet);
+    font-family: var(--font-body);
+    font-size: var(--fs-body-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+}
+
+@media (max-width: 48rem) {
+    .article-quote {
+        padding: 1.25rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+.article-quote-violet {
+    background-color: var(--card-fond2);
+    border-left: 0.25rem solid var(--color-violet-1);
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 0.25rem 0.25rem var(--drop-shadow);
+    color: var(--texte-violet);
+    font-family: var(--font-body);
+    font-size: var(--fs-body-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+}
+
+@media (max-width: 48rem) {
+    .article-quote-violet {
+        padding: 1.25rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* ================================
+   Card Extrait Component
+   ================================ */
+
+.card-extrait {
+    background: var(--card-fond);
+    border-radius: 1rem;
+    /* 16px */
+    border-left: 0.375rem solid var(--color-violet-changement);
+    /* 6px */
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 40rem;
+    /* 640px */
+    box-shadow: 0 0.25rem 0.375rem 0 var(--drop-shadow);
+    /* 0 4px 6px */
+}
+
+.card-extrait__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: var(--fs-body-1);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    color: var(--texte-black);
+    margin: 0 0 1rem 0;
+}
+
+.card-extrait__title-text {
+    flex: 1;
+}
+
+.card-extrait__icon {
+    flex-shrink: 0;
+    width: 1.75rem;
+    /* 28px */
+    height: 1.75rem;
+    /* 28px */
+    color: var(--texte-black);
+}
+
+.card-extrait__text {
+    font-family: var(--font-body);
+    font-size: var(--fs-body-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-height-2);
+    color: var(--texte-violet);
+    margin: 0;
+}
+
+@media (max-width: 48rem) {
+
+    /* 768px */
+    .card-extrait {
+        padding: 1.5rem;
+        margin: 1.5rem 1rem;
+    }
+
+    .card-extrait__title {
+        font-size: 1.5rem;
+    }
+}

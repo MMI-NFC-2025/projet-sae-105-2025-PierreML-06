@@ -1,0 +1,152 @@
+/* ================================
+   Error Page (404) – mobile first
+   ================================ */
+
+.error-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 6rem 1.5rem 3rem;
+    /* 96px 24px 48px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #473b5d 0%, #6c5e96 100%);
+    color: var(--color-white);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Cercle décoratif animé en fond */
+.error-page::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(90vw, 32.5rem);
+    /* 520px */
+    height: min(90vw, 32.5rem);
+    border-radius: 50%;
+    border: 0.1875rem solid var(--color-coral);
+    /* 3px */
+    opacity: 0.4;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: floatCircle404 20s ease-in-out infinite;
+}
+
+/* Animation douce du cercle */
+@keyframes floatCircle404 {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-46%, -54%) rotate(6deg);
+    }
+
+    50% {
+        transform: translate(-54%, -46%) rotate(-5deg);
+    }
+
+    75% {
+        transform: translate(-50%, -52%) rotate(10deg);
+    }
+}
+
+/* Contenu centré */
+.error-page__container {
+    position: relative;
+    z-index: 1;
+    max-width: 40rem;
+    /* 640px */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Icône */
+.error-page__icon {
+    color: var(--color-coral);
+}
+
+.error-page__icon svg {
+    width: 4rem;
+    /* 64px */
+    height: 4rem;
+    /* 64px */
+}
+
+/* Code 404 */
+.error-page__code {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    font-size: clamp(3.5rem, 14vw, 5rem);
+    color: var(--color-white);
+}
+
+/* Titre */
+.error-page__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--color-sand);
+    /* texte sable, cohérent avec la home */
+}
+
+/* Texte */
+.error-page__description {
+    margin: 0;
+    max-width: 32rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Actions – mobile : full width */
+.error-page__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 22.5rem;
+    /* 360px */
+    margin-top: 0.5rem;
+}
+
+.error-page__actions .boutton {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ===== Tablet / Desktop ===== */
+@media (min-width: 48rem) {
+
+    /* 768px */
+    .error-page {
+        padding: 7.5rem 2rem 5rem;
+        /* 120px 32px 80px */
+    }
+
+    .error-page__icon svg {
+        width: 5rem;
+        /* 80px */
+        height: 5rem;
+    }
+
+    .error-page__code {
+        font-size: 5rem;
+    }
+
+    .error-page__title {
+        font-size: 1.75rem;
+    }
+
+    .error-page__description {
+        font-size: 1.05rem;
+    }
+}
