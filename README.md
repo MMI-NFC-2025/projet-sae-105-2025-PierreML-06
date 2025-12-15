@@ -3,8 +3,8 @@
 
 À compléter :
 
-- NOM :
-- PRÉNOM :
-- GROUPE :
-- URL du site :
-- URL FIGMA :
+- NOM : Mouilleseaux Lhuillier
+- PRÉNOM : Pierre
+- GROUPE : B2
+- URL du site : https://devlace.pierre-mouilleseaux-lhuillier.fr
+- URL FIGMA : https://www.figma.com/design/wxsupfOfn8MXh1cdgxXDuO/Maquettes-projet-individuel-%E2%80%94-pierre-Mouilleseaux-Lhuillier?node-id=0-1&t=71fXx2mpI6lzkvk1-1
