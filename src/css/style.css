@@ -1,0 +1,89 @@
+/* ================================
+   src/css/style.css — Main Styles
+   ================================ */
+
+@import "./utils/variables.css";
+
+@import "./vendors/normalize.css";
+
+@import "./components/main.css";
+@import "./components/global.css";
+
+@import "./layout/header.css";
+@import "./layout/footer.css";
+@import "./layout/breadcrumb.css";
+@import "./layout/menu.css";
+
+@import "./components/media.css";
+@import "./components/hero.css";
+@import "./components/boutton.css";
+@import "./components/frise.css";
+@import "./components/formulaire.css";
+
+@import "./components/card_article.css";
+@import "./components/card_navigation.css";
+@import "./components/card_citation.css";
+@import "./components/card_film.css";
+@import "./components/card_projet.css";
+
+
+
+
+.geologica-fonts {
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0,
+        "SHRP" 0;
+}
+
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-light-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-medium-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
