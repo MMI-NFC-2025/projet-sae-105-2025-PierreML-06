@@ -1,14 +1,622 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Article about the film Radioactive" />
+    <title>Radioactive — The Matilda Effect — Devlace</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <!--Fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+
+    <script type="module" src="../src/js/script.js"></script>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Devlace" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
 </head>
 
 <body>
-    <a href="../fr/article_film.html">retour</a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header__bar">
+            <!-- Brand (gauche) -->
+            <a class="header__brand" href="./" aria-label="Back to Devlace homepage">
+                <!-- Logo avec fond violet foncé arrondi -->
+                <img class="header__brand-icon" src="../assets/icons/logo_couleur.svg" alt="Logo Devlace">
+                <span class="header__brand-text">Devlace</span>
+            </a>
+
+            <!-- Actions (droite) : lune → FR → burger -->
+            <div class="header__actions">
+                <!-- Lune - soleil -->
+                <button class="header__theme-toggle" data-btn="theme" type="button" aria-label="Toggle theme"
+                    aria-pressed="false">
+                    <span class="header__theme-icon-wrapper" aria-hidden="true">
+                        <!-- Lune -->
+                        <svg class="header__theme-icon header__theme-icon--moon" viewBox="0 0 32 32">
+                            <path
+                                d="M12 8c0 6.627 5.373 12 12 12 1.212 0 2.383-.18 3.486-.514C25.992 24.414 21.416 28 16 28 9.373 28 4 22.628 4 16c0-5.415 3.587-9.992 8.514-11.486A12 12 0 0 0 12 8Z"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                        <!-- Soleil -->
+                        <svg class="header__theme-icon header__theme-icon--sun" viewBox="0 0 32 32">
+                            <path
+                                d="M16 5.333V2.667m0 24v2.666M8.552 8.553 6.667 6.666m16.97 16.97 1.886 1.886M5.333 16H2.666m24 0h2.667m-5.695-7.448 1.885-1.885m-16.97 16.97-1.886 1.886M16 22.667a6.667 6.667 0 1 1 0-13.334 6.667 6.667 0 0 1 0 13.334Z"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+                <!-- FR remplacé par l'image SVG boutton_fr.svg -->
+                <a class="header__lang" href="/en/article_movie.html"
+                    aria-label="Go to the English version of the site">
+                    <img src="../assets/icons/boutton_fr.svg" alt="FR">
+                </a>
+                <!-- Burger -->
+                <button class="header__burger" data-btn="burger" type="button" aria-label="Open menu"
+                    aria-expanded="false" aria-controls="menu">
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= OVERLAY MENU ================= -->
+    <div class="menu" id="menu" hidden aria-hidden="true">
+        <div class="menu__panel" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+            <div class="menu__head">
+                <div class="menu__brand">
+                    <a href="/en/" class="menu__brand" aria-label="Back to Devlace English homepage">
+                        <img src="../assets/icons/logo_blanc.svg" alt="Devlace white logo" class="menu__logo"
+                            aria-hidden="true">
+                    </a>
+                    <h2 id="menuTitle" class="menu__title">Menu</h2>
+                </div>
+                <button class="menu__close" data-btn="menu-close" type="button" aria-label="Close menu">
+                    <span class="menu__close-x" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <nav class="menu__nav" aria-label="Main navigation">
+                <ul class="menu__list">
+                    <li><a href="./article_ada.html" class="menu__item">Ada Lovelace</a></li>
+                    <li><a href="./article_note_g.html" class="menu__item">the first published computer program</a></li>
+                    <li><a href="./article_film.html" class="menu__item">Radioactive (the film)</a></li>
+                    <li><a href="./article_livre.html" class="menu__item">The book: The Forgotten Women of History</a>
+                    </li>
+                    <li><a href="./article_litterature.html" class="menu__item">women scientists in literature</a></li>
+                    <li><a href="./frise.html" class="menu__item">Timeline</a></li>
+                    <li><a href="./autre_projet.html" class="menu__item">Other project</a></li>
+                    <li><a href="./galerie.html" class="menu__item">Gallery</a></li>
+                    <li><a href="./glossaire.html" class="menu__item">Glossary</a></li>
+                    <li><a href="./contact.html" class="menu__item">Contact</a></li>
+                    <li><a href="./a_propos.html" class="menu__item">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ================= BREADCRUMB ================= -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+                <a href="./index.html" class="breadcrumb__link">
+                    <img src="../assets/icons/home.svg" alt="" class="breadcrumb__icon" aria-hidden="true">
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb__item">
+                <span class="breadcrumb__separator" aria-hidden="true">›</span>
+            </li>
+            <li class="breadcrumb__item">
+                <span class="breadcrumb__current" aria-current="page">Radioactive (the film)</span>
+            </li>
+        </ol>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main id="main">
+        <!-- Ajout du titre de l'article -->
+        <div class="about-page">
+            <section class="about-section">
+                <h1 class="texte-titre">Radioactive: Marie Curie and the Matilda Effect</h1>
+
+                <!-- Ajout de la carte avec les métadonnées de l'article -->
+                <div class="article-meta">
+                    <div class="article-meta__row">
+
+                        <!-- DATE -->
+                        <div class="article-meta__item">
+                            <svg class="article-meta__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M4 8h16M4 8v8.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h9.606c1.118 0 1.677 0 2.104-.218.377-.192.683-.498.875-.874.218-.428.218-.986.218-2.104V8M4 8v-.8c0-1.12 0-1.68.218-2.108.192-.377.497-.682.874-.874C5.52 4 6.08 4 7.2 4H8m12 4v-.803c0-1.118 0-1.678-.218-2.105a2.001 2.001 0 0 0-.875-.874C18.48 4 17.92 4 16.8 4H16m0-2v2m0 0H8m0-2v2" />
+                            </svg>
+                            <span class="article-meta__text">19 October 2025</span>
+                        </div>
+
+                        <!-- AUTEUR -->
+                        <div class="article-meta__item">
+                            <svg class="article-meta__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M19 21a7 7 0 1 0-14 0m7-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" />
+                            </svg>
+                            <span class="article-meta__text">Pierre ML</span>
+                        </div>
+
+                    </div>
+
+                    <!-- TEMPS DE LECTURE -->
+                    <div class="article-meta__item">
+                        <svg class="article-meta__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 13V9m9-3-2-2m-9-2h4m-2 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" />
+                        </svg>
+                        <span class="article-meta__text">6 min read</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ajout de la citation encadrée -->
+            <section class="about-section">
+                <blockquote class="article-quote">
+                    With Radioactive, Marjane Satrapi depicts Marie Curie at work—brilliant and contested—and
+                    reveals how history tried to diminish her role. A narrative that makes the Matilda Effect
+                    tangibly felt.
+                </blockquote>
+            </section>
+
+            <!-- Ajout de la figure avec image historique et légende -->
+            <section class="about-section">
+                <figure class="article-media">
+                    <img src="../assets/img/affiche_radioactive.avif" alt="Poster for the film Radioactive"
+                        class="article-media__image">
+                    <figcaption class="article-media__caption">
+                        Poster for the film Radioactive by Marjane Satrapi
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- Ajout du paragraphe explicatif et du portrait d'Ada Lovelace -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    From its opening scenes, <strong>Radioactive</strong> refuses the frozen statue and follows a
+                    scientist at work. <strong>Marjane Satrapi</strong> frames <strong>Marie Curie</strong> within the
+                    very
+                    materiality of experiments: the fatigue of repeated gestures, intuition refined over time, and
+                    notebooks filled with measurements and trials. Discovery is not a romantic illumination; it is a
+                    sequence of attempts, corrected errors and debated principles. This <em>realistic</em> choice has a
+                    strong effect: it places the researcher at the center of action where public narratives have too
+                    often relegated women to the periphery.
+                </p>
+
+            </section>
+
+            <!-- Ajout de la carte citation avec guillemets -->
+            <section class="about-section">
+                <blockquote class="card-citation">
+                    <p class="card-citation__text">
+                        Marie Curie was not only a great scientist; she was a force of nature who had to fight at every
+                        turn for her place in history.
+                    </p>
+                    <p class="card-citation__author">— Marjane Satrapi, director</p>
+                </blockquote>
+            </section>
+
+            <!-- Ajout nouveau paragraphe explicatif sur l'Engin analytique -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    Throughout the biopic, private life, scientific work and the circulation of ideas intertwine.
+                    Marie's meeting with <strong>Pierre Curie</strong> takes the shape of an <em>intellectual
+                        alliance</em>
+                    as much as an affectionate partnership. The film reminds us how the <strong>laboratory</strong> is a
+                    space of co-construction, cross-notes and methodological choices. This collaboration does not
+                    erase <strong>Marie</strong>; it clarifies her role. After Pierre's death, she takes up the reins,
+                    expands research, organizes resources and continues to publish. The trajectory restores a truth
+                    sometimes omitted in simplified narratives: <strong>Marie Curie's scientific autonomy</strong> is
+                    not
+                    a belated consequence but a continuous reality.
+                </p>
+            </section>
+
+            <section class="about-section">
+                <figure class="article-media">
+                    <!-- Vidéo à la place de l'image -->
+                    <video class="article-media__image" controls poster="../assets/img/photo_film_radioactive.avif">
+                        <source src="../assets/video/ba_radioactive.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la vidéo HTML5.
+                    </video>
+
+                    <figcaption class="article-media__caption">
+                        Trailer for the film Radioactive
+                    </figcaption>
+                </figure>
+
+                <div class="boutton-wrapper" style="text-align: center; margin-top: 2rem;">
+                    <a href="https://www.youtube.com/watch?v=lZJDg2A6odQ" class="boutton boutton--secondary"
+                        aria-label="Watch the trailer">
+
+                        <span class="boutton__text">Watch the Trailer</span>
+
+                        <!-- SVG inline -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="boutton__icon" viewBox="0 0 32 32"
+                            aria-hidden="true">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" />
+                        </svg>
+
+                    </a>
+                </div>
+            </section>
+
+
+            <!-- Ajout paragraphe sur le cœur de la Note G -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    This is precisely where the <strong>Matilda Effect</strong> appears in the background. Coined by
+                    historian <strong>Margaret W. Rossiter</strong>, the term describes the invisibility, misattribution
+                    or minimization of women's credit in science. In Marie Curie's case, this shadow slips into the
+                    margins: the 1903 Nobel episode initially conceived without her before being corrected, the
+                    closed doors of the Academy of Sciences, and the media uproar around her relationship with
+                    <strong>Paul Langevin</strong>—all moments when society preferred to debate a woman's respectability
+                    rather than acknowledge the rigor of the scientist. <strong>Radioactive</strong> does not impose
+                    this frame afterwards; it shows situations, glances and institutional hesitations that help explain
+                    how a bias can take hold when credit is not firmly documented, supported and named.
+                </p>
+
+            </section>
+
+            <!-- Ajout de la carte citation avec guillemets -->
+            <section class="about-section">
+                <blockquote class="card-citation">
+                    <p class="card-citation__text">
+                        Premier principe : 
+                        ne jamais se laisser
+                        abattre par des personnes 
+                        ou par des événements.
+                    </p>
+                    <p class="card-citation__author">— Marie Curie</p>
+                </blockquote>
+            </section>
+
+            <!-- Ajout paragraphe sur les nombres de Bernoulli -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    Le film choisit aussi
+                    une <strong>mise en perspective temporelle</strong>,
+                    en reliant la <strong>radioactivité</strong>
+                    à ses héritages contrastés.
+                    Les images de blocs opératoires,
+                    d’unités de radiothérapie,
+                    mais aussi les visions
+                    des catastrophes
+                    et des usages militaires
+                    rappellent que la science
+                    n’est jamais purement abstraite :
+                    elle se prolonge
+                    dans des pratiques,
+                    des politiques,
+                    des responsabilités.
+                    Cette perspective
+                    évite l’<em>hagiographie</em>
+                    et souligne
+                    un autre point essentiel
+                    pour comprendre
+                    <strong>Matilda Effect</strong>:
+                    la valeur d’une contribution
+                    ne disparaît pas
+                    parce que ses usages
+                    sont ambivalents.
+                    Le <em>débat éthique</em>
+                    peut être vif ;
+                    il ne justifie pas
+                    l’effacement
+                    de l’autrice
+                    de la découverte.
+                </p>
+
+            </section>
+
+            <!-- Ajout portrait de Charles Babbage -->
+            <section class="about-section">
+                <figure class="article-media">
+                    <img src="../assets/img/portrait_marjane_satrapi.avif" alt="Portrait of Marjane Satrapi"
+                        class="article-media__image">
+                    <figcaption class="article-media__caption">
+                        Portrait of Marjane Satrapi
+                    </figcaption>
+                </figure>
+            </section>
+
+
+            <!-- Ajout du paragraphe sur la traçabilité -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    What <strong>Radioactive</strong> particularly succeeds in is restoring the <strong>method</strong>.
+                    We watch <strong>Marie Curie</strong> record, sort, retry and publish. This materiality of knowledge
+                    becomes the best answer to invisibility: when an experiment is described, a note is dated, or a
+                    signature attests to a result, credit ties to evidence. The film thus recalls a simple and powerful
+                    rule: to counter the <strong>Matilda Effect</strong>, one must archive, publish, co-sign wisely and
+                    ensure the chain of transmission—from the laboratory to institutions—is clear.
+                </p>
+
+            </section>
+
+            <!-- Ajout de la carte citation avec guillemets -->
+            <section class="about-section">
+                <blockquote class="card-citation">
+                    <p class="card-citation__text">
+                        On ne fait jamais
+                        attention à ce qui a été
+                        fait ; on ne voit que ce
+                        qui reste à faire.
+                    </p>
+                    <p class="card-citation__author">— Marie Curie</p>
+                </blockquote>
+            </section>
+
+            <!-- Ajout paragraphe sur la portée universelle de la Note G -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    L’interprétation de <strong>Rosamund Pike</strong>
+                    renforce ce message.
+                    Sa <strong>Marie Curie</strong>
+                    n’est ni l’icône glacée
+                    ni l’héroïne sans faille.
+                    Elle doute,
+                    se met en colère,
+                    se heurte aux cadres sociaux,
+                    puis revient
+                    à la table d’expériences.
+                    Ce retour constant
+                    au réel de la recherche
+                    dessine un personnage
+                    dont la force
+                    vient moins
+                    de la célébration
+                    que de la <em>persévérance</em>.
+                    En montrant
+                    la chercheuse
+                    qui se bat
+                    pour le financement,
+                    pour l’accès aux espaces,
+                    pour la reconnaissance
+                    de ses pairs,
+                    le film place
+                    la question du <em>crédit</em>
+                    au cœur de l’intrigue
+                    et non en annexe.
+                </p>
+
+            </section>
+
+            <!-- Ajout portrait de Charles Babbage -->
+            <section class="about-section">
+                <figure class="article-media">
+                    <img src="../assets/img/photo_film_radioactive.avif"
+                        alt="Portrait sépia de Charles Babbage, homme âgé en costume victorien"
+                        class="article-media__image">
+                    <figcaption class="article-media__caption">
+                        Extrait tier du film radioactive
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- Add paragraph about the Matilda Effect -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    On a site dedicated to the <strong>Matilda Effect</strong>, <strong>Radioactive</strong> serves as a
+                    case study. It shows how invisibility creeps in—not always by conspiracy but through habits,
+                    reflexes and institutions that favour certain names and forget others. It also teaches the methods
+                    to counter it: link evidence to the author, revise narratives when archives demand it, and teach the
+                    collective nature of research without dissolving individual contribution. The film thus becomes
+                    both a tool for scientific culture and a biographical narrative.
+                </p>
+
+            </section>
+
+            <!-- Ajout de la carte citation avec guillemets -->
+            <section class="about-section">
+                <blockquote class="card-citation">
+                    <p class="card-citation__text">
+                        En sciences, nous devons nous intéresser
+                        aux choses, pas aux personnes.
+                    </p>
+                    <p class="card-citation__author">— Marie Curie</p>
+                </blockquote>
+            </section>
+
+            <!-- Ajout paragraphe sur la vulgarisation de la Note G -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    « <strong>Radioactive</strong> »
+                    dialogue naturellement
+                    avec l’histoire d’<strong>Ada Lovelace</strong>,
+                    pionnière de l’algorithmique
+                    mise à l’honneur
+                    dans cette série d’articles.
+                    Chez Ada
+                    comme chez <strong>Marie</strong>,
+                    des idées fondatrices
+                    ont été rendues discutables
+                    ou secondaires
+                    parce que la société,
+                    les institutions
+                    et les récits médiatiques
+                    ont privilégié
+                    d’autres figures,
+                    souvent masculines,
+                    ou d’autres critères
+                    que la qualité
+                    de la démonstration.
+                    Relire Ada
+                    à la lumière de Marie,
+                    et Marie
+                    à la lumière d’Ada,
+                    is to understand
+                    that the <strong>Matilda Effect</strong>
+                    n’est pas
+                    un épisode isolé
+                    mais une <em>trame répétée</em>,
+                    que l’on peut défaire
+                    à force de précision,
+                    de sources
+                    et de narration juste.
+                </p>
+
+            </section>
+
+            <!-- Ajout portrait d'Ada Lovelace officiel et bouton -->
+            <section class="about-section">
+                <figure class="article-media">
+                    <img src="../assets/img/portrait_ada_lovelace.avif"
+                        alt="Portrait painting of Ada Lovelace wearing an elegant dress and jewelry"
+                        class="article-media__image">
+                    <figcaption class="article-media__caption">
+                        Portrait of Ada Lovelace (1815–1852), pioneer of computing
+                    </figcaption>
+                </figure>
+
+                <div class="boutton-wrapper" style="text-align: center; margin-top: 2rem;">
+                    <a href="./article_ada.html" class="boutton boutton--secondary"
+                        aria-label="Learn more about Ada Lovelace">
+
+                        <span class="boutton__text">Learn more about Ada</span>
+
+                        <!-- SVG inline -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="boutton__icon" viewBox="0 0 32 32"
+                            aria-hidden="true">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" />
+                        </svg>
+
+                    </a>
+                </div>
+            </section>
+
+            <!-- Ajout paragraphe conclusion sur l'architecture -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    “Making things visible is not an added luxury; it is a condition of truth.” This sentence could
+                    serve as a guiding thread for the entire project. <strong>Radioactive</strong> reminds us
+                    forcefully:
+                    science is about results, and also about <em>attributions</em>. Telling the story correctly is
+                    already a way of <strong>repairing</strong>.
+                </p>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- Logo et nom -->
+            <div class="footer__brand">
+                <!-- Utilisation du chemin correct pour le logo -->
+                <a href="/fr/" class="menu__brand" aria-label="Retour à l’accueil Devlace">
+                    <img class="footer__logo" src="../assets/icons/logo_couleur.svg" alt="" width="44" height="44"
+                        aria-hidden="true">
+                </a>
+                <span class="footer__brand-text">Devlace</span>
+            </div>
+
+            <!-- Section Article -->
+            <section class="footer__section">
+                <h2 class="footer__heading">Articles</h2>
+                <nav aria-label="Articles navigation">
+                    <ul class="footer__list">
+                        <li><a href="./article_note_g.html" class="footer__link">Ada Lovelace's Note G</a></li>
+                        <li><a href="./article_litterature.html" class="footer__link">Women Scientists in Literature</a>
+                        </li>
+                        <li><a href="./article_ada.html" class="footer__link">Ada Lovelace: the First Programmer</a>
+                        </li>
+                        <li><a href="./article_film.html" class="footer__link">Radioactive: Marie Curie and the Matilda
+                                Effect</a>
+                        </li>
+                        <li><a href="./article_livre.html" class="footer__link">The Forgotten Women of History</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Section Menu -->
+            <section class="footer__section">
+                <h2 class="footer__heading">Menu</h2>
+                <nav aria-label="Main navigation">
+                    <ul class="footer__list">
+                        <li><a href="./glossaire.html" class="footer__link">Glossary</a></li>
+                        <li><a href="./autre_projet.html" class="footer__link">Other project</a></li>
+                        <li><a href="./frise.html" class="footer__link">Timeline</a></li>
+                        <li><a href="./galerie.html" class="footer__link">Gallery</a></li>
+                        <li><a href="./a_propos.html" class="footer__link">About</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Section Nous suivre -->
+            <section class="footer__section">
+                <h2 class="footer__heading">Follow us</h2>
+                <div class="footer__social">
+                    <a href="https://facebook.com" class="footer__social-link" aria-label="Follow us on Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/facebook.svg" alt="Facebook icon" aria-hidden="true">
+                    </a>
+                    <a href="https://instagram.com" class="footer__social-link" aria-label="Follow us on Instagram"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/instagram.svg" alt="Instagram icon" aria-hidden="true">
+                    </a>
+                    <a href="https://twitter.com" class="footer__social-link" aria-label="Follow us on X (Twitter)"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/x.svg" alt="X icon" aria-hidden="true">
+                    </a>
+                    <a href="https://youtube.com" class="footer__social-link" aria-label="Follow us on YouTube"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/youtube.svg" alt="YouTube icon" aria-hidden="true">
+                    </a>
+                </div>
+            </section>
+
+            <!-- Section Contact -->
+            <section class="footer__contact">
+                <h3 class="footer__title">Contact</h3>
+                <p class="footer__text">Project created by Pierre Mouilleseaux Lhuillier</p>
+                <div class="footer__contact-item">
+                    <img src="../assets/icons/mail.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+                    <a href="mailto:Devlance@gmail.com" class="footer__contact-link">Devlance@gmail.com</a>
+                </div>
+                <div class="footer__contact-item">
+                    <img src="../assets/icons/phone.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+                    <a href="tel:0707002112" class="footer__contact-link">07 07 00 21 12</a>
+                </div>
+            </section>
+
+            <!-- Crédits -->
+            <div class="footer__credits">
+                <p class="footer__text">Project completed in 2025 as part of an educational exercise at the <a
+                        href="https://www.iut-nfc.univ-fcomte.fr/" target="_blank" rel="noopener noreferrer"
+                        class="footer__mmi-link">MMi department of
+                        Montbéliard</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

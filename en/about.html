@@ -1,14 +1,287 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="About the Matilda Effect project" />
+    <title>About — The Matilda Effect — Devlace</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <!--Fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+
+    <script type="module" src="../src/js/script.js"></script>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Devlace" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
 </head>
 
 <body>
-    <a href="../fr/a_propos.html">retour</a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header__bar">
+            <!-- Brand (gauche) -->
+            <a class="header__brand" href="./" aria-label="Back to Devlace homepage">
+                <!-- Logo avec fond violet foncé arrondi -->
+                <img class="header__brand-icon" src="../assets/icons/logo_couleur.svg" alt="Logo Devlace">
+                <span class="header__brand-text">Devlace</span>
+            </a>
+
+            <!-- Actions (droite) : lune → FR → burger -->
+            <div class="header__actions">
+                <!-- Lune - soleil -->
+                <button class="header__theme-toggle" data-btn="theme" type="button" aria-label="Toggle theme"
+                    aria-pressed="false">
+                    <span class="header__theme-icon-wrapper" aria-hidden="true">
+                        <!-- Lune -->
+                        <svg class="header__theme-icon header__theme-icon--moon" viewBox="0 0 32 32">
+                            <path
+                                d="M12 8c0 6.627 5.373 12 12 12 1.212 0 2.383-.18 3.486-.514C25.992 24.414 21.416 28 16 28 9.373 28 4 22.628 4 16c0-5.415 3.587-9.992 8.514-11.486A12 12 0 0 0 12 8Z"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                        <!-- Soleil -->
+                        <svg class="header__theme-icon header__theme-icon--sun" viewBox="0 0 32 32">
+                            <path
+                                d="M16 5.333V2.667m0 24v2.666M8.552 8.553 6.667 6.666m16.97 16.97 1.886 1.886M5.333 16H2.666m24 0h2.667m-5.695-7.448 1.885-1.885m-16.97 16.97-1.886 1.886M16 22.667a6.667 6.667 0 1 1 0-13.334 6.667 6.667 0 0 1 0 13.334Z"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+                <!-- FR remplacé par l'image SVG boutton_fr.svg -->
+                <a class="header__lang" href="/en/about.html" aria-label="Go to the English version of the site">
+                    <img src="../assets/icons/boutton_fr.svg" alt="FR">
+                </a>
+                <!-- Burger -->
+                <button class="header__burger" data-btn="burger" type="button" aria-label="Open menu"
+                    aria-expanded="false" aria-controls="menu">
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= OVERLAY MENU ================= -->
+    <div class="menu" id="menu" hidden aria-hidden="true">
+        <div class="menu__panel" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+            <div class="menu__head">
+                <div class="menu__brand">
+                    <a href="/en/" class="menu__brand" aria-label="Back to Devlace English homepage">
+                        <img src="../assets/icons/logo_blanc.svg" alt="Devlace white logo" class="menu__logo"
+                            aria-hidden="true">
+                    </a>
+                    <h2 id="menuTitle" class="menu__title">Menu</h2>
+                </div>
+                <button class="menu__close" data-btn="menu-close" type="button" aria-label="Close menu">
+                    <span class="menu__close-x" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <nav class="menu__nav" aria-label="Navigation principale">
+                <ul class="menu__list">
+                    <li><a href="./article_ada.html" class="menu__item">Ada Lovelace</a></li>
+                    <li><a href="./article_note_g.html" class="menu__item">the first published computer program</a></li>
+                    <li><a href="./article_film.html" class="menu__item">Radioactive (the film)</a></li>
+                    <li><a href="./article_livre.html" class="menu__item">The book: The Forgotten Women of History</a>
+                    </li>
+                    <li><a href="./article_litterature.html" class="menu__item">women scientists in literature</a></li>
+                    <li><a href="./frise.html" class="menu__item">Timeline</a></li>
+                    <li><a href="./autre_projet.html" class="menu__item">Other project</a></li>
+                    <li><a href="./galerie.html" class="menu__item">Gallery</a></li>
+                    <li><a href="./glossaire.html" class="menu__item">Glossary</a></li>
+                    <li><a href="./contact.html" class="menu__item">Contact</a></li>
+                    <li><a href="./a_propos.html" class="menu__item">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ================= BREADCRUMB ================= -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+                <a href="./index.html" class="breadcrumb__link">
+                    <img src="../assets/icons/home.svg" alt="" class="breadcrumb__icon" aria-hidden="true">
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb__item">
+                <span class="breadcrumb__separator" aria-hidden="true">›</span>
+            </li>
+            <li class="breadcrumb__item">
+                <span class="breadcrumb__current" aria-current="page">About</span>
+            </li>
+        </ol>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main id="main" class="about-page">
+        <!-- Contenu de la page À propos -->
+        <section class="about-section">
+            <h1 class="texte-titre">
+                <span class="about-section__title-text">My mission</span>
+
+                <svg class="about-section__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 11v5m0 5a9 9 0 1 1 0-18 9 9 0 0 1 0 18Zm.05-13v.1h-.1V8h.1Z" />
+                </svg>
+            </h1>
+            <p class="texte-contenu">
+                I make often-forgotten scientific contributions visible, starting from Ada Lovelace and the Matilda
+                Effect. My goal: explain clearly without misrepresenting, cite sources properly, and inspire further
+                reading.
+            </p>
+        </section>
+
+        <!-- Card texte avec bordure orange -->
+        <div class="about-card">
+            <h2 class="about-card__title">
+                <span class="about-card__title-text">Who I am</span>
+
+                <svg class="about-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    aria-hidden="true">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 21a7 7 0 1 0-14 0m7-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" />
+                </svg>
+            </h2>
+
+
+            <p class="about-card__text">
+                My name is Pierre, a student in MMi (Montbéliard). This site is an educational project (2025): I
+                design the editorial line, write the content, select sources, and handle layout and accessibility.
+            </p>
+        </div>
+
+
+
+        <section class="about-section">
+            <h2 class="texte-titre">
+                <span class="about-section__title-text">Why this site</span>
+
+                <svg class="about-section__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    aria-hidden="true">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 9.8V20m0-10.2c0-1.68 0-2.52.327-3.162a3 3 0 0 1 1.31-1.311C14.28 5 15.12 5 16.8 5h2.6c.56 0 .84 0 1.054.109.188.096.34.249.437.437C21 5.76 21 6.04 21 6.6v8.8c0 .56 0 .84-.11 1.054a.999.999 0 0 1-.436.437c-.213.109-.493.109-1.052.109h-2.833c-.939 0-1.41 0-1.836.13a2.996 2.996 0 0 0-1.032.552c-.344.283-.605.674-1.126 1.455L12 20m0-10.2c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C9.72 5 8.88 5 7.2 5H4.6c-.56 0-.84 0-1.054.109a1 1 0 0 0-.437.437C3 5.76 3 6.04 3 6.6v8.8c0 .56 0 .84.109 1.054a1 1 0 0 0 .437.437C3.76 17 4.039 17 4.598 17h2.833c.939 0 1.408 0 1.835.13.377.114.73.302 1.034.552.343.282.602.67 1.118 1.446L12 20" />
+                </svg>
+            </h2>
+
+            <p class="texte-contenu">
+                Because our scientific narratives remain too focused on "great men." The Matilda Effect names this
+                invisibilization. Here I offer short, sourced, and readable articles: a portrait of Ada, an
+                explanation of her "algorithm", a critical reading of the film Radioactive, a book review and a
+                literature panorama on women in science.
+            </p>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- Logo et nom -->
+            <div class="footer__brand">
+                <!-- Utilisation du chemin correct pour le logo -->
+                <a href="/en/" class="menu__brand" aria-label="Back to Devlace English homepage">
+                    <img class="footer__logo" src="../assets/icons/logo_couleur.svg" alt="" width="44" height="44"
+                        aria-hidden="true">
+                </a>
+                <span class="footer__brand-text">Devlace</span>
+            </div>
+
+            <!-- Section Article -->
+            <section class="footer__section">
+                <h2 class="footer__heading">Articles</h2>
+                <nav aria-label="Articles navigation">
+                    <ul class="footer__list">
+                        <li><a href="./article_note_g.html" class="footer__link">Ada Lovelace's Note G</a></li>
+                        <li><a href="./article_litterature.html" class="footer__link">Women Scientists in Literature</a>
+                        </li>
+                        <li><a href="./article_ada.html" class="footer__link">Ada Lovelace: the First Programmer</a>
+                        </li>
+                        <li><a href="./article_film.html" class="footer__link">Radioactive: Marie Curie and the Matilda
+                                Effect</a>
+                        </li>
+                        <li><a href="./article_livre.html" class="footer__link">The Forgotten Women of History</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Section Menu -->
+            <section class="footer__section">
+                <h2 class="footer__heading">Menu</h2>
+                <nav aria-label="Main navigation">
+                    <ul class="footer__list">
+                        <li><a href="./glossaire.html" class="footer__link">Glossary</a></li>
+                        <li><a href="./autre_projet.html" class="footer__link">Other project</a></li>
+                        <li><a href="./frise.html" class="footer__link">Timeline</a></li>
+                        <li><a href="./galerie.html" class="footer__link">Gallery</a></li>
+                        <li><a href="./a_propos.html" class="footer__link">About</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Section Nous suivre -->
+            <section class="footer__section">
+                <h2 class="footer__heading">Follow us</h2>
+                <div class="footer__social">
+                    <a href="https://facebook.com" class="footer__social-link" aria-label="Follow us on Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/facebook.svg" alt="Facebook icon" aria-hidden="true">
+                    </a>
+                    <a href="https://instagram.com" class="footer__social-link" aria-label="Follow us on Instagram"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/instagram.svg" alt="Instagram icon" aria-hidden="true">
+                    </a>
+                    <a href="https://twitter.com" class="footer__social-link" aria-label="Follow us on X (Twitter)"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/x.svg" alt="X icon" aria-hidden="true">
+                    </a>
+                    <a href="https://youtube.com" class="footer__social-link" aria-label="Follow us on YouTube"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/youtube.svg" alt="YouTube icon" aria-hidden="true">
+                    </a>
+                </div>
+            </section>
+
+            <!-- Section Contact -->
+            <section class="footer__contact">
+                <h3 class="footer__title">Contact</h3>
+                <p class="footer__text">Project created by Pierre Mouilleseaux Lhuillier</p>
+                <div class="footer__contact-item">
+                    <img src="../assets/icons/mail.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+                    <a href="mailto:Devlance@gmail.com" class="footer__contact-link">Devlance@gmail.com</a>
+                </div>
+                <div class="footer__contact-item">
+                    <img src="../assets/icons/phone.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+                    <a href="tel:0707002112" class="footer__contact-link">07 07 00 21 12</a>
+                </div>
+            </section>
+
+            <!-- Crédits -->
+            <div class="footer__credits">
+                <p class="footer__text">Project completed in 2025 as part of an educational exercise at the <a
+                        href="https://www.iut-nfc.univ-fcomte.fr/" target="_blank" rel="noopener noreferrer"
+                        class="footer__mmi-link">MMi department of
+                        Montbéliard</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

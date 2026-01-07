@@ -1,14 +1,312 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Glossary of terms related to the Matilda Effect" />
+    <title>Glossary — The Matilda Effect — Devlace</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <!--Fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+
+    <script type="module" src="../src/js/script.js"></script>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Devlace" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
 </head>
 
 <body>
-    <a href="../fr/glossaire.html">retour</a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header__bar">
+            <!-- Brand (left) -->
+            <a class="header__brand" href="./" aria-label="Back to Devlace homepage">
+                <img class="header__brand-icon" src="../assets/icons/logo_couleur.svg" alt="Devlace logo">
+                <span class="header__brand-text">Devlace</span>
+            </a>
+
+            <!-- Actions (right) -->
+            <div class="header__actions">
+                <button class="header__theme-toggle" data-btn="theme" type="button" aria-label="Toggle theme"
+                    aria-pressed="false">
+                    <span class="header__theme-icon-wrapper" aria-hidden="true">
+                        <svg class="header__theme-icon header__theme-icon--moon" viewBox="0 0 32 32">
+                            <path
+                                d="M12 8c0 6.627 5.373 12 12 12 1.212 0 2.383-.18 3.486-.514C25.992 24.414 21.416 28 16 28 9.373 28 4 22.628 4 16c0-5.415 3.587-9.992 8.514-11.486A12 12 0 0 0 12 8Z"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                        <svg class="header__theme-icon header__theme-icon--sun" viewBox="0 0 32 32">
+                            <path
+                                d="M16 5.333V2.667m0 24v2.666M8.552 8.553 6.667 6.666m16.97 16.97 1.886 1.886M5.333 16H2.666m24 0h2.667m-5.695-7.448 1.885-1.885m-16.97 16.97-1.886 1.886M16 22.667a6.667 6.667 0 1 1 0-13.334 6.667 6.667 0 0 1 0 13.334Z"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+
+                <a class="header__lang" href="/fr/glossaire.html" aria-label="Go to the French version of the site">
+                    <img src="../assets/icons/boutton_fr.svg" alt="FR">
+                </a>
+
+                <button class="header__burger" data-btn="burger" type="button" aria-label="Open menu"
+                    aria-expanded="false" aria-controls="menu">
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= OVERLAY MENU ================= -->
+    <div class="menu" id="menu" hidden aria-hidden="true">
+        <div class="menu__panel" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+            <div class="menu__head">
+                <div class="menu__brand">
+                    <a href="/en/" class="menu__brand" aria-label="Back to Devlace homepage">
+                        <img src="../assets/icons/logo_blanc.svg" alt="white Devlace logo" class="menu__logo"
+                            aria-hidden="true">
+                    </a>
+                    <h2 id="menuTitle" class="menu__title">Menu</h2>
+                </div>
+                <button class="menu__close" data-btn="menu-close" type="button" aria-label="Close menu">
+                    <span class="menu__close-x" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <nav class="menu__nav" aria-label="Main navigation">
+                <ul class="menu__list">
+                    <li><a href="./article_ada.html" class="menu__item">Ada Lovelace</a></li>
+                    <li><a href="./article_note_g.html" class="menu__item">The first published<br>computer program</a>
+                    </li>
+                    <li><a href="./article_film.html" class="menu__item">Radioactive, the film</a></li>
+                    <li><a href="./article_livre.html" class="menu__item">The book: The Forgotten Women of History</a>
+                    </li>
+                    <li><a href="./article_litterature.html" class="menu__item">Women in science in literature</a></li>
+                    <li><a href="./frise.html" class="menu__item">Timeline</a></li>
+                    <li><a href="./autre_projet.html" class="menu__item">Other project</a></li>
+                    <li><a href="./galerie.html" class="menu__item">Gallery</a></li>
+                    <li><a href="./glossaire.html" class="menu__item">Glossary</a></li>
+                    <li><a href="./contact.html" class="menu__item">Contact</a></li>
+                    <li><a href="./a_propos.html" class="menu__item">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ================= BREADCRUMB ================= -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+                <a href="./index.html" class="breadcrumb__link">
+                    <img src="../assets/icons/home.svg" alt="" class="breadcrumb__icon" aria-hidden="true">
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb__item">
+                <span class="breadcrumb__separator" aria-hidden="true">›</span>
+            </li>
+            <li class="breadcrumb__item">
+                <span class="breadcrumb__current" aria-current="page">Glossary</span>
+            </li>
+        </ol>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main id="main">
+        <div class="glossary">
+            <div class="glossary__header">
+                <h1 class="glossary__title">Glossary</h1>
+                <p class="glossary__subtitle">Key terms and concepts related to the Matilda Effect and women in science.
+                </p>
+            </div>
+
+            <section class="glossary__section">
+                <h2 class="glossary__letter">A</h2>
+
+                <div class="glossary__entry">
+                    <h3 class="glossary__term">Ada Lovelace</h3>
+                    <p class="glossary__definition">Pioneer of algorithmics; reframes computing as method and rigorous
+                        attribution.</p>
+                </div>
+
+                <div class="glossary__entry">
+                    <h3 class="glossary__term">Algorithm</h3>
+                    <p class="glossary__definition">Finite, ordered, and traceable sequence of operations; the “grammar”
+                        of modern code.</p>
+                </div>
+            </section>
+
+            <section class="glossary__section">
+                <h2 class="glossary__letter">C</h2>
+
+                <div class="glossary__entry">
+                    <h3 class="glossary__term">Punch cards</h3>
+                    <p class="glossary__definition">Input medium for instructions and data used to control the machine.
+                    </p>
+                </div>
+            </section>
+
+            <section class="glossary__section">
+                <h2 class="glossary__letter">E</h2>
+
+                <div class="glossary__entry">
+                    <h3 class="glossary__term">Analytical Engine</h3>
+                    <p class="glossary__definition">Separation of calculation (“mill”) and memory (“store”); foundation
+                        of programmability.</p>
+                </div>
+            </section>
+
+            <section class="glossary__section">
+                <h2 class="glossary__letter">I</h2>
+
+                <div class="glossary__entry">
+                    <h3 class="glossary__term">Iteration</h3>
+                    <p class="glossary__definition">Repeating a part of the plan with updated values (idea of loops).
+                    </p>
+                </div>
+            </section>
+
+            <section class="glossary__section">
+                <h2 class="glossary__letter">L</h2>
+
+                <div class="glossary__entry">
+                    <h3 class="glossary__term">The Forgotten Women of History</h3>
+                    <p class="glossary__definition">Works that recount and reassign credit based on archival research.
+                    </p>
+                </div>
+            </section>
+
+            <section class="glossary__section">
+                <h2 class="glossary__letter">N</h2>
+
+                <div class="glossary__entry">
+                    <h3 class="glossary__term">Note G</h3>
+                    <p class="glossary__definition">Plan of operations (Bernoulli), often presented as one of the first
+                        published “programs”.</p>
+                </div>
+            </section>
+
+            <section class="glossary__section">
+                <h2 class="glossary__letter">R</h2>
+
+                <div class="glossary__entry">
+                    <h3 class="glossary__term">“Radioactive” (film)</h3>
+                    <p class="glossary__definition">Biopic by Marjane Satrapi showing method, credit, and its
+                        fragilities around Marie Curie.</p>
+                </div>
+            </section>
+
+            <section class="glossary__section">
+                <h2 class="glossary__letter">T</h2>
+
+                <div class="glossary__entry">
+                    <h3 class="glossary__term">Traceability / Proof</h3>
+                    <p class="glossary__definition">Naming, dating, and archiving to link a result to its author; a
+                        central antidote to invisibilization.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <a href="/en/" class="menu__brand" aria-label="Back to Devlace homepage">
+                    <img class="footer__logo" src="../assets/icons/logo_couleur.svg" alt="" width="44" height="44"
+                        aria-hidden="true">
+                </a>
+                <span class="footer__brand-text">Devlace</span>
+            </div>
+
+            <section class="footer__section">
+                <h2 class="footer__heading">Articles</h2>
+                <nav aria-label="Article navigation">
+                    <ul class="footer__list">
+                        <li><a href="./article_note_g.html" class="footer__link">Ada Lovelace’s Note G</a></li>
+                        <li><a href="./article_litterature.html" class="footer__link">Women in science in literature</a>
+                        </li>
+                        <li><a href="./article_ada.html" class="footer__link">Ada Lovelace: first programmer</a></li>
+                        <li><a href="./article_film.html" class="footer__link">Radioactive: Marie Curie and the Matilda
+                                Effect</a></li>
+                        <li><a href="./article_livre.html" class="footer__link">The Forgotten Women of History</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="footer__section">
+                <h2 class="footer__heading">Menu</h2>
+                <nav aria-label="Main navigation">
+                    <ul class="footer__list">
+                        <li><a href="./glossaire.html" class="footer__link">Glossary</a></li>
+                        <li><a href="./autre_projet.html" class="footer__link">Other project</a></li>
+                        <li><a href="./frise.html" class="footer__link">Timeline</a></li>
+                        <li><a href="./galerie.html" class="footer__link">Gallery</a></li>
+                        <li><a href="./a_propos.html" class="footer__link">About</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="footer__section">
+                <h2 class="footer__heading">Follow us</h2>
+                <div class="footer__social">
+                    <a href="https://facebook.com" class="footer__social-link" aria-label="Follow us on Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/facebook.svg" alt="facebook icon" aria-hidden="true">
+                    </a>
+                    <a href="https://instagram.com" class="footer__social-link" aria-label="Follow us on Instagram"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/instagram.svg" alt="instagram icon" aria-hidden="true">
+                    </a>
+                    <a href="https://twitter.com" class="footer__social-link" aria-label="Follow us on X (Twitter)"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/x.svg" alt="x icon" aria-hidden="true">
+                    </a>
+                    <a href="https://youtube.com" class="footer__social-link" aria-label="Follow us on YouTube"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/youtube.svg" alt="youtube icon" aria-hidden="true">
+                    </a>
+                </div>
+            </section>
+
+            <section class="footer__contact">
+                <h3 class="footer__title">Contact</h3>
+                <p class="footer__text">Project created by Pierre Mouilleseaux Lhuillier</p>
+                <div class="footer__contact-item">
+                    <img src="../assets/icons/mail.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+                    <a href="mailto:Devlance@gmail.com" class="footer__contact-link">Devlance@gmail.com</a>
+                </div>
+                <div class="footer__contact-item">
+                    <img src="../assets/icons/phone.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+                    <a href="tel:0707002112" class="footer__contact-link">07 07 00 21 12</a>
+                </div>
+            </section>
+
+            <div class="footer__credits">
+                <p class="footer__text">Project completed in 2025 as part of an educational exercise in the <a
+                        href="https://www.iut-nfc.univ-fcomte.fr/" target="_blank" rel="noopener noreferrer"
+                        class="footer__mmi-link">MMI department of
+                        Montbéliard</a></p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>

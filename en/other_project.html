@@ -1,14 +1,371 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Other projects related to the Matilda Effect" />
+    <title>Other Projects — The Matilda Effect — Devlace</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <!--Fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+
+    <script type="module" src="../src/js/script.js"></script>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Devlace" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
 </head>
 
 <body>
-    <a href="../fr/autre_projet.html">retour</a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header__bar">
+            <!-- Brand (left) -->
+            <a class="header__brand" href="./" aria-label="Back to the Devlace homepage">
+                <img class="header__brand-icon" src="../assets/icons/logo_couleur.svg" alt="Devlace logo">
+                <span class="header__brand-text">Devlace</span>
+            </a>
+
+            <!-- Actions (right) -->
+            <div class="header__actions">
+                <button class="header__theme-toggle" data-btn="theme" type="button" aria-label="Toggle theme"
+                    aria-pressed="false">
+                    <span class="header__theme-icon-wrapper" aria-hidden="true">
+                        <svg class="header__theme-icon header__theme-icon--moon" viewBox="0 0 32 32">
+                            <path
+                                d="M12 8c0 6.627 5.373 12 12 12 1.212 0 2.383-.18 3.486-.514C25.992 24.414 21.416 28 16 28 9.373 28 4 22.628 4 16c0-5.415 3.587-9.992 8.514-11.486A12 12 0 0 0 12 8Z"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                        <svg class="header__theme-icon header__theme-icon--sun" viewBox="0 0 32 32">
+                            <path
+                                d="M16 5.333V2.667m0 24v2.666M8.552 8.553 6.667 6.666m16.97 16.97 1.886 1.886M5.333 16H2.666m24 0h2.667m-5.695-7.448 1.885-1.885m-16.97 16.97-1.886 1.886M16 22.667a6.667 6.667 0 1 1 0-13.334 6.667 6.667 0 0 1 0 13.334Z"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+
+                <a class="header__lang" href="/en/other_project.html"
+                    aria-label="Go to the English version of the site">
+                    <img src="../assets/icons/boutton_fr.svg" alt="EN">
+                </a>
+
+                <button class="header__burger" data-btn="burger" type="button" aria-label="Open menu"
+                    aria-expanded="false" aria-controls="menu">
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                    <span class="header__burger-line" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= OVERLAY MENU ================= -->
+    <div class="menu" id="menu" hidden aria-hidden="true">
+        <div class="menu__panel" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+            <div class="menu__head">
+                <div class="menu__brand">
+                    <a href="/en/" class="menu__brand" aria-label="Back to the Devlace homepage">
+                        <img src="../assets/icons/logo_blanc.svg" alt="white Devlace logo" class="menu__logo"
+                            aria-hidden="true">
+                    </a>
+                    <h2 id="menuTitle" class="menu__title">Menu</h2>
+                </div>
+                <button class="menu__close" data-btn="menu-close" type="button" aria-label="Close menu">
+                    <span class="menu__close-x" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <nav class="menu__nav" aria-label="Main navigation">
+                <ul class="menu__list">
+                    <li><a href="./article_ada.html" class="menu__item">Ada Lovelace</a></li>
+                    <li><a href="./article_note_g.html" class="menu__item">The first published<br>computer program</a>
+                    </li>
+                    <li><a href="./article_film.html" class="menu__item">Radioactive, the film</a></li>
+                    <li><a href="./article_livre.html" class="menu__item">The book: The Forgotten Women of History</a>
+                    </li>
+                    <li><a href="./article_litterature.html" class="menu__item">Women in science in literature</a></li>
+                    <li><a href="./frise.html" class="menu__item">Timeline</a></li>
+                    <li><a href="./autre_projet.html" class="menu__item">Other projects</a></li>
+                    <li><a href="./galerie.html" class="menu__item">Gallery</a></li>
+                    <li><a href="./glossaire.html" class="menu__item">Glossary</a></li>
+                    <li><a href="./contact.html" class="menu__item">Contact</a></li>
+                    <li><a href="./a_propos.html" class="menu__item">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ================= BREADCRUMB ================= -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+                <a href="./index.html" class="breadcrumb__link">
+                    <img src="../assets/icons/home.svg" alt="" class="breadcrumb__icon" aria-hidden="true">
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb__item">
+                <span class="breadcrumb__separator" aria-hidden="true">›</span>
+            </li>
+            <li class="breadcrumb__item">
+                <span class="breadcrumb__current" aria-current="page">Other projects</span>
+            </li>
+        </ol>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main id="main">
+        <div class="project-cards-container">
+            <article class="card-projet card-projet--coral">
+                <div class="card-projet__header">
+                    <div class="card-projet__text">
+                        <h2 class="card-projet__title">Radiance</h2>
+                        <p class="card-projet__author">By Alex Ringenbach</p>
+                    </div>
+                    <div class="card-projet__icon">
+                        <img src="/assets/icons/logo_radiance.webp" alt="" aria-hidden="true">
+                    </div>
+                </div>
+                <a href="./404go" class="boutton boutton--secondary card-projet__button">
+                    Learn more
+                    <svg class="boutton__icon" viewBox="0 0 32 32" aria-hidden="true" width="20" height="20">
+                        <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </article>
+
+            <article class="card-projet card-projet--purple">
+                <div class="card-projet__header">
+                    <div class="card-projet__text">
+                        <h2 class="card-projet__title">Jocelyn Bell</h2>
+                        <p class="card-projet__author">By Estelle Coulon</p>
+                    </div>
+                    <div class="card-projet__icon card-projet__icon--badge">
+                        <img src="/assets/icons/logo_jocelyn_bell.webp" alt="" aria-hidden="true">
+                    </div>
+                </div>
+                <a href="./404go" class="boutton boutton--primary card-projet__button">
+                    Learn more
+                    <svg class="boutton__icon" viewBox="0 0 32 32" aria-hidden="true" width="20" height="20">
+                        <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </article>
+
+            <article class="card-projet card-projet--coral">
+                <div class="card-projet__header">
+                    <div class="card-projet__text">
+                        <h2 class="card-projet__title">Empreinte</h2>
+                        <p class="card-projet__author">By Yanis Chouhib</p>
+                    </div>
+                    <div class="card-projet__icon">
+                        <img src="/assets/icons/logo_empreinte.webp" alt="" aria-hidden="true">
+                    </div>
+                </div>
+                <a href="./404go" class="boutton boutton--secondary card-projet__button">
+                    Learn more
+                    <svg class="boutton__icon" viewBox="0 0 32 32" aria-hidden="true" width="20" height="20">
+                        <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </article>
+
+            <article class="card-projet card-projet--purple">
+                <div class="card-projet__header">
+                    <div class="card-projet__text">
+                        <h2 class="card-projet__title">Feminine Footprints</h2>
+                        <p class="card-projet__author">By Maman Thilor Sambe</p>
+                    </div>
+                    <div class="card-projet__icon card-projet__icon--badge">
+                        <img src="/assets/icons/logo_empreintes_feminines.webp" alt="" aria-hidden="true">
+                    </div>
+                </div>
+                <a href="./404go" class="boutton boutton--primary card-projet__button">
+                    Learn more
+                    <svg class="boutton__icon" viewBox="0 0 32 32" aria-hidden="true" width="20" height="20">
+                        <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </article>
+
+            <article class="card-projet card-projet--coral">
+                <div class="card-projet__header">
+                    <div class="card-projet__text">
+                        <h2 class="card-projet__title">Forgotten Stars</h2>
+                        <p class="card-projet__author">By Lilian Maitre</p>
+                    </div>
+                    <div class="card-projet__icon">
+                        <img src="/assets/icons/logo_Etoiles_Oubliees.webp" alt="" aria-hidden="true">
+                    </div>
+                </div>
+                <a href="./404go" class="boutton boutton--secondary card-projet__button">
+                    Learn more
+                    <svg class="boutton__icon" viewBox="0 0 32 32" aria-hidden="true" width="20" height="20">
+                        <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </article>
+
+            <article class="card-projet card-projet--purple">
+                <div class="card-projet__header">
+                    <div class="card-projet__text">
+                        <h2 class="card-projet__title">ADA</h2>
+                        <p class="card-projet__author">By Virgile Esnaux</p>
+                    </div>
+                    <div class="card-projet__icon card-projet__icon--badge">
+                        <img src="/assets/icons/logo_ada.webp" alt="" aria-hidden="true">
+                    </div>
+                </div>
+                <a href="./404go" class="boutton boutton--primary card-projet__button">
+                    Learn more
+                    <svg class="boutton__icon" viewBox="0 0 32 32" aria-hidden="true" width="20" height="20">
+                        <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </article>
+
+            <article class="card-projet card-projet--coral">
+                <div class="card-projet__header">
+                    <div class="card-projet__text">
+                        <h2 class="card-projet__title">AQITA</h2>
+                        <p class="card-projet__author">By Melvyn Philippon</p>
+                    </div>
+                    <div class="card-projet__icon">
+                        <img src="/assets/icons/logo_aqita.webp" alt="" aria-hidden="true">
+                    </div>
+                </div>
+                <a href="./404go" class="boutton boutton--secondary card-projet__button">
+                    Learn more
+                    <svg class="boutton__icon" viewBox="0 0 32 32" aria-hidden="true" width="20" height="20">
+                        <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </article>
+
+            <article class="card-projet card-projet--purple">
+                <div class="card-projet__header">
+                    <div class="card-projet__text">
+                        <h2 class="card-projet__title">The Essence of a Woman of Science</h2>
+                        <p class="card-projet__author">By Inès SITTLER</p>
+                    </div>
+                    <div class="card-projet__icon card-projet__icon--badge">
+                        <img src="/assets/icons/logo_essence_d_une_femme.webp" alt="" aria-hidden="true">
+                    </div>
+                </div>
+                <a href="./404go" class="boutton boutton--primary card-projet__button">
+                    Learn more
+                    <svg class="boutton__icon" viewBox="0 0 32 32" aria-hidden="true" width="20" height="20">
+                        <path d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </article>
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <a href="/en/" class="menu__brand" aria-label="Back to the Devlace homepage">
+                    <img class="footer__logo" src="../assets/icons/logo_couleur.svg" alt="" width="44" height="44"
+                        aria-hidden="true">
+                </a>
+                <span class="footer__brand-text">Devlace</span>
+            </div>
+
+            <section class="footer__section">
+                <h2 class="footer__heading">Articles</h2>
+                <nav aria-label="Article navigation">
+                    <ul class="footer__list">
+                        <li><a href="./article_note_g.html" class="footer__link">Ada Lovelace’s Note G</a></li>
+                        <li><a href="./article_litterature.html" class="footer__link">Women in science in literature</a>
+                        </li>
+                        <li><a href="./article_ada.html" class="footer__link">Ada Lovelace: first programmer</a></li>
+                        <li><a href="./article_film.html" class="footer__link">Radioactive: Marie Curie and the Matilda
+                                Effect</a></li>
+                        <li><a href="./article_livre.html" class="footer__link">The Forgotten Women of History</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="footer__section">
+                <h2 class="footer__heading">Menu</h2>
+                <nav aria-label="Main navigation">
+                    <ul class="footer__list">
+                        <li><a href="./glossaire.html" class="footer__link">Glossary</a></li>
+                        <li><a href="./autre_projet.html" class="footer__link">Other projects</a></li>
+                        <li><a href="./frise.html" class="footer__link">Timeline</a></li>
+                        <li><a href="./galerie.html" class="footer__link">Gallery</a></li>
+                        <li><a href="./a_propos.html" class="footer__link">About</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="footer__section">
+                <h2 class="footer__heading">Follow us</h2>
+                <div class="footer__social">
+                    <a href="https://facebook.com" class="footer__social-link" aria-label="Follow us on Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/facebook.svg" alt="facebook icon" aria-hidden="true">
+                    </a>
+                    <a href="https://instagram.com" class="footer__social-link" aria-label="Follow us on Instagram"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/instagram.svg" alt="instagram icon" aria-hidden="true">
+                    </a>
+                    <a href="https://twitter.com" class="footer__social-link" aria-label="Follow us on X (Twitter)"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/x.svg" alt="x icon" aria-hidden="true">
+                    </a>
+                    <a href="https://youtube.com" class="footer__social-link" aria-label="Follow us on YouTube"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/youtube.svg" alt="youtube icon" aria-hidden="true">
+                    </a>
+                </div>
+            </section>
+
+            <section class="footer__contact">
+                <h3 class="footer__title">Contact</h3>
+                <p class="footer__text">Project created by Pierre Mouilleseaux Lhuillier</p>
+                <div class="footer__contact-item">
+                    <img src="../assets/icons/mail.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+                    <a href="mailto:Devlance@gmail.com" class="footer__contact-link">Devlance@gmail.com</a>
+                </div>
+                <div class="footer__contact-item">
+                    <img src="../assets/icons/phone.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+                    <a href="tel:0707002112" class="footer__contact-link">07 07 00 21 12</a>
+                </div>
+            </section>
+
+            <div class="footer__credits">
+                <p class="footer__text">Project completed in 2025 as part of an educational exercise in the <a
+                        href="https://www.iut-nfc.univ-fcomte.fr/" target="_blank" rel="noopener noreferrer"
+                        class="footer__mmi-link">MMI department of Montbéliard</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

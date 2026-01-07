@@ -1,14 +1,547 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Article about Ada Lovelace's Note G" />
+    <title>Ada Lovelace's Note G — The Matilda Effect — Devlace</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <!--Fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+
+    <script type="module" src="../src/js/script.js"></script>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Devlace" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
 </head>
 
 <body>
-    <a href="../fr/article_ada.html">retour</a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header__bar">
+            <!-- Brand (gauche) -->
+            <a class="header__brand" href="./" aria-label="Back to Devlace homepage">
+                <!-- Logo avec fond violet foncé arrondi -->
+                <a href="/en/" class="menu__brand" aria-label="Back to Devlace English homepage">
+                    <span class="header__brand-text">Devlace</span>
+                </a>
+
+                <!-- Actions (droite) : lune → FR → burger -->
+                <div class="header__actions">
+                    <!-- Lune - soleil -->
+                    <button class="header__theme-toggle" data-btn="theme" type="button" aria-label="Toggle theme"
+                        aria-pressed="false">
+                        <span class="header__theme-icon-wrapper" aria-hidden="true">
+                            <!-- Lune -->
+                            <svg class="header__theme-icon header__theme-icon--moon" viewBox="0 0 32 32">
+                                <path
+                                    d="M12 8c0 6.627 5.373 12 12 12 1.212 0 2.383-.18 3.486-.514C25.992 24.414 21.416 28 16 28 9.373 28 4 22.628 4 16c0-5.415 3.587-9.992 8.514-11.486A12 12 0 0 0 12 8Z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                            <!-- Soleil -->
+                            <svg class="header__theme-icon header__theme-icon--sun" viewBox="0 0 32 32">
+                                <path
+                                    d="M16 5.333V2.667m0 24v2.666M8.552 8.553 6.667 6.666m16.97 16.97 1.886 1.886M5.333 16H2.666m24 0h2.667m-5.695-7.448 1.885-1.885m-16.97 16.97-1.886 1.886M16 22.667a6.667 6.667 0 1 1 0-13.334 6.667 6.667 0 0 1 0 13.334Z"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <!-- FR remplacé par l'image SVG boutton_fr.svg -->
+                    <a class="header__lang" href="/en/article_ada.html"
+                        aria-label="Go to the English version of the site">
+                        <img src="../assets/icons/boutton_fr.svg" alt="FR">
+                    </a>
+                    <!-- Burger -->
+                    <button class="header__burger" data-btn="burger" type="button" aria-label="Ouvrir le menu"
+                        aria-expanded="false" aria-controls="menu">
+                        <span class="header__burger-line" aria-hidden="true"></span>
+                        <span class="header__burger-line" aria-hidden="true"></span>
+                        <span class="header__burger-line" aria-hidden="true"></span>
+                    </button>
+                </div>
+        </div>
+    </header>
+
+    <!-- ================= OVERLAY MENU ================= -->
+    <div class="menu" id="menu" hidden aria-hidden="true">
+        <div class="menu__panel" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+            <div class="menu__head">
+                <div class="menu__brand">
+                    <a href="/en/" class="menu__brand" aria-label="Back to Devlace English homepage">
+                        <img src="../assets/icons/logo_blanc.svg" alt="logo blanc devlance" class="menu__logo"
+                            aria-hidden="true">
+                    </a>
+                    <h2 id="menuTitle" class="menu__title">Menu</h2>
+                </div>
+                <button class="menu__close" data-btn="menu-close" type="button" aria-label="Close menu">
+                    <span class="menu__close-x" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <nav class="menu__nav" aria-label="Navigation principale">
+                <ul class="menu__list">
+                    <li><a href="./article_ada.html" class="menu__item">Ada Lovelace</a></li>
+                    <li><a href="./article_note_g.html" class="menu__item">the first published computer program</a></li>
+                    <li><a href="./article_film.html" class="menu__item">Radioactive (the film)</a></li>
+                    <li><a href="./article_livre.html" class="menu__item">The book: The Forgotten Women of History</a>
+                    </li>
+                    <li><a href="./article_litterature.html" class="menu__item">women scientists in literature</a></li>
+                    <li><a href="./frise.html" class="menu__item">Timeline</a></li>
+                    <li><a href="./autre_projet.html" class="menu__item">Other project</a></li>
+                    <li><a href="./galerie.html" class="menu__item">Gallery</a></li>
+                    <li><a href="./glossaire.html" class="menu__item">Glossary</a></li>
+                    <li><a href="./contact.html" class="menu__item">Contact</a></li>
+                    <li><a href="./a_propos.html" class="menu__item">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ================= BREADCRUMB ================= -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+                <a href="./index.html" class="breadcrumb__link">
+                    <img src="../assets/icons/home.svg" alt="" class="breadcrumb__icon" aria-hidden="true">
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb__item">
+                <span class="breadcrumb__separator" aria-hidden="true">›</span>
+            </li>
+            <li class="breadcrumb__item">
+                <span class="breadcrumb__current" aria-current="page">Ada Lovelace's Note G</span>
+            </li>
+        </ol>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main id="main">
+        <!-- Ajout du titre de l'article -->
+        <div class="about-page">
+            <section class="about-section">
+                <h1 class="texte-titre">Ada Lovelace: the First Computer Programmer</h1>
+
+                <!-- Ajout de la carte avec les métadonnées de l'article -->
+                <div class="article-meta">
+                    <div class="article-meta__row">
+
+                        <!-- DATE -->
+                        <div class="article-meta__item">
+                            <svg class="article-meta__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M4 8h16M4 8v8.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h9.606c1.118 0 1.677 0 2.104-.218.377-.192.683-.498.875-.874.218-.428.218-.986.218-2.104V8M4 8v-.8c0-1.12 0-1.68.218-2.108.192-.377.497-.682.874-.874C5.52 4 6.08 4 7.2 4H8m12 4v-.803c0-1.118 0-1.678-.218-2.105a2.001 2.001 0 0 0-.875-.874C18.48 4 17.92 4 16.8 4H16m0-2v2m0 0H8m0-2v2" />
+                            </svg>
+                            <span class="article-meta__text">19 October 2025</span>
+                        </div>
+
+                        <!-- AUTEUR -->
+                        <div class="article-meta__item">
+                            <svg class="article-meta__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M19 21a7 7 0 1 0-14 0m7-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" />
+                            </svg>
+                            <span class="article-meta__text">Pierre ML</span>
+                        </div>
+
+                    </div>
+
+                    <!-- TEMPS DE LECTURE -->
+                    <div class="article-meta__item">
+                        <svg class="article-meta__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 13V9m9-3-2-2m-9-2h4m-2 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" />
+                        </svg>
+                        <span class="article-meta__text">6–7 min read</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ajout de la citation encadrée -->
+            <section class="about-section">
+                <blockquote class="article-quote">
+                    Visionary yet long minimized: Ada Lovelace imagined the algorithm and a general machine, then
+                    faced invisibilization — the Matilda Effect, in plain terms.
+                </blockquote>
+            </section>
+
+            <!-- Ajout de la figure avec image historique et légende -->
+            <section class="about-section">
+                <figure class="article-media">
+                    <img src="../assets/img/portrait_ada_lovelace.avif" alt="Portrait of Ada Lovelace"
+                        class="article-media__image">
+                    <figcaption class="article-media__caption">
+                        Portrait of Ada Lovelace (1815–1852), pioneer of computing
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- Ajout du paragraphe explicatif et du portrait d'Ada Lovelace -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    To tell the story of <strong>Ada Lovelace</strong>, we must hold together two threads: a technical
+                    intuition of unsettling modernity and a public narrative that long muted her achievements.
+                    Born in 1815, the daughter of poet Lord Byron and Annabella Milbanke, Ada grew up between the
+                    music of words and the rigor of mathematics. Influenced by scholars like <strong>Mary
+                        Somerville</strong>,
+                    she learned to think of ideas as manipulable structures. This way of inhabiting both language
+                    and calculation led her, before many others, to see that a machine could execute
+                    <strong>abstract instructions</strong>.
+                </p>
+            </section>
+
+            <!-- Ajout de la carte citation avec guillemets -->
+            <section class="about-section">
+                <blockquote class="card-citation">
+                    <p class="card-citation__text">
+                        My mathematical work involves considerable imagination.
+                    </p>
+                    <p class="card-citation__author">— Ada Lovelace</p>
+                </blockquote>
+            </section>
+
+            <!-- Ajout nouveau paragraphe explicatif sur l'Engin analytique -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    Meeting <strong>Charles Babbage</strong> opened the field: the <strong>Analytical Engine</strong>,
+                    still theoretical, promised to separate the place of calculation (the “mill”) from memory (the
+                    “store”) and to introduce programming via punched cards. In 1843 Ada translated a paper by
+                    mathematician <strong>Luigi Menabrea</strong> and enriched it with long Notes. She laid out an
+                    execution plan for the machine to compute the <strong>Bernoulli numbers</strong> and, above all,
+                    formalized what we now call an <strong>algorithm</strong>: a sequence of finite, ordered and
+                    traceable
+                    operations in which intermediate results are named, stored and resumed. It is not “code” in the
+                    modern sense, but it is its <em>grammar</em>.
+                </p>
+            </section>
+
+            <!-- Ajout portrait de Charles Babbage -->
+            <section class="about-section">
+                <figure class="article-media">
+                    <img src="../assets/img/portrait_charles_baddage.avif" alt="Portrait of Charles Babbage"
+                        class="article-media__image">
+                    <figcaption class="article-media__caption">
+                        Portrait of Charles Babbage (1860), an early proposer of computing principles.
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- Ajout paragraphe sur le cœur de la Note G -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    In the 1830s, <strong>Ada</strong> discovered Babbage's projects: first the difference engine,
+                    then, above all, the <strong>Analytical Engine</strong>—a punched-card machine capable, in
+                    principle,
+                    of chaining varied operations. In 1843 Ada translated into English an article by
+                    <strong>Luigi Menabrea</strong> on the Analytical Engine and supplemented it with personal Notes
+                    much longer than the original text. These Notes do more than popularize: they
+                    <em>broaden the frame</em>. Ada explains how to decompose a problem into instruction sequences,
+                    anticipating <strong>modern programming</strong> and the idea of a <strong>general-purpose
+                        machine</strong>
+                    configurable by programs.
+                </p>
+            </section>
+
+            <!-- Ajout de la carte citation avec guillemets -->
+            <section class="about-section">
+                <blockquote class="card-citation">
+                    <p class="card-citation__text">
+                        The intellectual, the moral and the religious seem to me all naturally linked and chained into
+                        one
+                        great and harmonious whole.
+                    </p>
+                    <p class="card-citation__author">— Ada Lovelace</p>
+                </blockquote>
+            </section>
+
+            <!-- Ajout paragraphe sur les nombres de Bernoulli -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    The scope of this vision goes beyond numerical calculation. <strong>Ada</strong> asserted a radical
+                    idea for her century: if symbols can be encoded, a machine can, in principle, manipulate more
+                    than numbers. Music, text, figures—any form that can be represented could become the object of
+                    mechanical processing. This intuition foreshadows not only the <strong>programmable
+                        computer</strong>
+                    but also proposes a <strong>cultural definition of computing</strong> as the science of
+                    representations, where one composes, transforms and orchestrates symbols.
+                </p>
+
+            </section>
+
+            <section class="about-section">
+                <figure class="article-media">
+                    <img src="../assets/img/extrait_de_la_note_g.avif" alt="Excerpt from Note G by Ada Lovelace"
+                        class="article-media__image">
+                    <figcaption class="article-media__caption">
+                        Excerpt from Note G (1843), by Ada Lovelace
+                    </figcaption>
+                </figure>
+
+                <div class="boutton-wrapper" style="text-align: center; margin-top: 2rem;">
+                    <a href="./article_note_g.html" class="boutton boutton--secondary"
+                        aria-label="Learn more about Note G">
+
+                        <span class="boutton__text">Learn more about Note G</span>
+
+                        <!-- SVG inline -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="boutton__icon" viewBox="0 0 32 32"
+                            aria-hidden="true">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" />
+                        </svg>
+
+                    </a>
+                </div>
+
+            </section>
+
+
+            <!-- Ajout du paragraphe sur la traçabilité -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    It is precisely because the contribution is <em>conceptual</em>, embedded in a collective project
+                    and
+                    within a machine never built, that it was long minimized in mainstream narratives. The
+                    <strong>Matilda Effect</strong>, coined by historian <strong>Margaret W. Rossiter</strong>,
+                    describes the
+                    tendency to minimize or reassign women's contributions. In Ada's case, it appears in Babbage's
+                    shadow, the reduction of her role to an industrious “translator,” and the suspicion around an
+                    invention without a prototype. The social mechanics are familiar: we celebrate visible “genius,”
+                    naturalize the assistant, and hesitate to recognize an <em>intellectual parentage</em> when it
+                    disrupts expected role orders.
+                </p>
+            </section>
+
+            <!-- Ajout portrait de Charles Babbage -->
+            <section class="about-section">
+                <figure class="article-media">
+                    <img src="../assets/img/portrait_ada_lovelace_jeune.avif" alt="Portrait of young Ada Lovelace"
+                        class="article-media__image">
+                    <figcaption class="article-media__caption">
+                        Portrait of Ada Lovelace (young)
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- Ajout paragraphe sur la portée universelle de la Note G -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    Twentieth- and twenty-first-century historiographical debates do not all sing the same tune: some
+                    stress the limits of the device proposed in the Notes, while others reassess their foundational
+                    value. This debate does not negate a robust fact: <strong>Ada established a method</strong>. She
+                    described how a machine could be driven by a plan, articulated <em>memory</em> and
+                    <em>calculation</em>,
+                    conceived iteration, and made execution explainable afterwards. In contemporary terms, she set
+                    criteria of <strong>readability</strong> and <strong>traceability</strong> that make a good program:
+                    one understands “how” the result is obtained, not only “that” it is obtained.
+                </p>
+
+            </section>
+
+            <!-- Ajout de la carte citation avec guillemets -->
+            <section class="about-section">
+                <blockquote class="card-citation">
+                    <p class="card-citation__text">
+                        This brain that is mine is something more than merely mortal, as time will show.
+                    </p>
+                    <p class="card-citation__author">— Ada Lovelace</p>
+                </blockquote>
+            </section>
+
+            <!-- Ajout paragraphe sur l'effet Matilda -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    Viewed in the context of this site, Ada's story naturally connects with the other pages. The
+                    analysis of <strong>Radioactive</strong> showed how credit can falter when evidence is not explicit;
+                    the presentation of "The Forgotten Women of History" mapped cases of <em>invisibility</em> across
+                    the arts, sciences and politics; and the exposition of the <strong>Note G</strong> detailed the
+                    inner
+                    workings of a "first program." Ada thus becomes the axis linking <strong>concept</strong>,
+                    <strong>narrative</strong> and <strong>method</strong>: she gives a face to programmability, a
+                    language
+                    to discuss it, and a warning about the fragility of credit when one confuses author and executor,
+                    prototype and idea.
+                </p>
+            </section>
+
+            <section class="about-section">
+                <figure class="article-media">
+                    <img src="../assets/img/analytical_engine.avif" alt="Diagram of the Analytical Engine"
+                        class="article-media__image">
+                    <figcaption class="article-media__caption">
+                        Analytical Engine by Charles Babbage
+                    </figcaption>
+                </figure>
+
+                <div class="boutton-wrapper" style="text-align: center; margin-top: 2rem;">
+                    <a href="https://fr.wikipedia.org/wiki/Machine_analytique" class="boutton boutton--secondary"
+                        aria-label="Learn more about the Analytical Engine">
+
+                        <span class="boutton__text">Learn more about the Analytical Engine</span>
+
+                        <!-- SVG inline -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="boutton__icon" viewBox="0 0 32 32"
+                            aria-hidden="true">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m28 16-6.667-6.667M28 16l-6.667 6.667M28 16H4" />
+                        </svg>
+
+                    </a>
+                </div>
+            </section>
+
+            <!-- Ajout paragraphe sur la vulgarisation de la Note G -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    Her legacy today is not merely symbolic. It takes the form of a professional reflex: document,
+                    name and attribute. A <strong>readable program</strong> is a plan that reveals its states,
+                    transitions
+                    and dependencies—exactly what <strong>Ada</strong> tried to write down. An <strong>equitable
+                        project</strong>
+                    is a way of working where people sign appropriately, archive steps, and make visible the
+                    <em>ecologies of knowledge</em> rather than collapsing everything onto a solitary figure. In this
+                    sense, telling Ada's story is learning to <strong>work better</strong>.
+                </p>
+
+            </section>
+
+            <!-- Ajout de la carte citation avec guillemets -->
+            <section class="about-section">
+                <blockquote class="card-citation">
+                    <p class="card-citation__text">
+                        For me, religion is science and science is religion.
+                    </p>
+                    <p class="card-citation__author">— Ada Lovelace</p>
+                </blockquote>
+            </section>
+
+            <!-- Ajout paragraphe conclusion sur l'architecture -->
+            <section class="about-section">
+                <p class="texte-contenu">
+                    If <strong>Ada Lovelace</strong> has long seemed to occupy only a romantic margin of the history of
+                    technology, it is because our narratives preferred completed artifacts over processes, built
+                    machines over execution plans, and single figures over collaborations. Returning to her
+                    <strong>Notes</strong>
+                    shifts the center: it shows that <strong>computing</strong> is born of a <em>writing gesture</em>,
+                    that
+                    ideas exist before their artifacts, and that credit, if not maintained by method, disappears.
+                    Repairing it means encouraging programming, publishing and transmission—and writing history at
+                    the precise pace of those who make it.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- Logo et nom -->
+            <div class="footer__brand">
+                <!-- Utilisation du chemin correct pour le logo -->
+                <a href="/en/" class="menu__brand" aria-label="Back to Devlace English homepage">
+                    <img class="footer__logo" src="../assets/icons/logo_couleur.svg" alt="" width="44" height="44"
+                        aria-hidden="true">
+                </a>
+                <span class="footer__brand-text">Devlace</span>
+            </div>
+
+            <!-- Section Article -->
+            <section class="footer__section">
+                <h2 class="footer__heading">Articles</h2>
+                <nav aria-label="Articles navigation">
+                    <ul class="footer__list">
+                        <li><a href="./article_note_g.html" class="footer__link">Ada Lovelace's Note G</a></li>
+                        <li><a href="./article_litterature.html" class="footer__link">Women Scientists in Literature</a>
+                        </li>
+                        <li><a href="./article_ada.html" class="footer__link">Ada Lovelace: the First Programmer</a>
+                        </li>
+                        <li><a href="./article_film.html" class="footer__link">Radioactive: Marie Curie and the Matilda
+                                Effect</a>
+                        </li>
+                        <li><a href="./article_livre.html" class="footer__link">The Forgotten Women of History</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Section Menu -->
+            <section class="footer__section">
+                <h2 class="footer__heading">Menu</h2>
+                <nav aria-label="Main navigation">
+                    <ul class="footer__list">
+                        <li><a href="./glossaire.html" class="footer__link">Glossary</a></li>
+                        <li><a href="./autre_projet.html" class="footer__link">Other project</a></li>
+                        <li><a href="./frise.html" class="footer__link">Timeline</a></li>
+                        <li><a href="./galerie.html" class="footer__link">Gallery</a></li>
+                        <li><a href="./a_propos.html" class="footer__link">About</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Section Nous suivre -->
+            <section class="footer__section">
+                <h2 class="footer__heading">Follow us</h2>
+                <div class="footer__social">
+                    <!-- Utilisation des chemins corrects pour les icônes sociales -->
+                    <a href="https://facebook.com" class="footer__social-link" aria-label="Follow us on Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/facebook.svg" alt="Facebook icon" aria-hidden="true">
+                    </a>
+                    <a href="https://instagram.com" class="footer__social-link" aria-label="Follow us on Instagram"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/instagram.svg" alt="Instagram icon" aria-hidden="true">
+                    </a>
+                    <a href="https://twitter.com" class="footer__social-link" aria-label="Follow us on X (Twitter)"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/x.svg" alt="X icon" aria-hidden="true">
+                    </a>
+                    <a href="https://youtube.com" class="footer__social-link" aria-label="Follow us on YouTube"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/icons/youtube.svg" alt="YouTube icon" aria-hidden="true">
+                    </a>
+                </div>
+            </section>
+
+            <!-- Section Contact -->
+            <section class="footer__contact">
+                <h3 class="footer__title">Contact</h3>
+                <p class="footer__text">Project created by Pierre Mouilleseaux Lhuillier</p>
+                <div class="footer__contact-item">
+                    <img src="../assets/icons/mail.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+                    <a href="mailto:Devlance@gmail.com" class="footer__contact-link">Devlance@gmail.com</a>
+                </div>
+                <div class="footer__contact-item">
+                    <img src="../assets/icons/phone.svg" alt="" class="footer__contact-icon" aria-hidden="true">
+                    <a href="tel:0707002112" class="footer__contact-link">07 07 00 21 12</a>
+                </div>
+            </section>
+
+            <!-- Crédits -->
+            <div class="footer__credits">
+                <p class="footer__text">Project completed in 2025 as part of an educational exercise at the <a
+                        href="https://www.iut-nfc.univ-fcomte.fr/" target="_blank" rel="noopener noreferrer"
+                        class="footer__mmi-link">MMi department of
+                        Montbéliard</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
